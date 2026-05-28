@@ -211,11 +211,11 @@ def draw_feedback_panel(image, exercise, feedback, angles, statuses, h, w):
     if bad == 0 and warning == 0:
         result, color = "EXCELLENT FORM", (0, 255, 100)
     elif bad == 0:
-        result, color = "GOOD — MINOR ADJUSTMENTS", (0, 200, 255)
+        result, color = "GOOD, MINOR ADJUSTMENTS", (0, 200, 255)
     elif bad <= total // 2:
         result, color = "NEEDS IMPROVEMENT", (0, 140, 255)
     else:
-        result, color = "POOR FORM — REVIEW NEEDED", (0, 60, 255)
+        result, color = "POOR FORM, REVIEW NEEDED", (0, 60, 255)
 
     put(result, 10, y + 20, color, 0.5, 2)
 
@@ -250,38 +250,41 @@ def analyze_squat(landmarks):
         get_keypoint(landmarks, 27)
     )
 
-    if left_knee <= 90:
-        feedback.append("✅ Knee depth: Full squat depth achieved")
+    if left_knee <= 100:
+        feedback.append("[GOOD] Knee depth: Good squat depth")
         status.append("good")
-    elif left_knee <= 120:
-        feedback.append("⚠️ Knee depth: Slightly shallow — squat deeper")
+    elif left_knee <= 130:
+        feedback.append("[WARN] Knee depth: Slightly shallow, squat a bit deeper")
         status.append("warning")
     else:
-        feedback.append("❌ Knee depth: Too shallow — hip crease must go below knees")
+        feedback.append("[BAD] Knee depth: Too shallow, bend knees more")
         status.append("bad")
 
-    if 45 <= hip_hinge <= 100:
-        feedback.append("✅ Hip hinge: Good forward lean")
+    if 40 <= hip_hinge <= 110:
+        feedback.append("[GOOD] Hip hinge: Good forward lean")
         status.append("good")
-    elif hip_hinge < 45:
-        feedback.append("⚠️ Hip hinge: Leaning too far forward")
+    elif hip_hinge < 40:
+        feedback.append("[WARN] Hip hinge: Leaning too far forward")
         status.append("warning")
     else:
-        feedback.append("❌ Hip hinge: Not hinging enough at hips")
+        feedback.append("[BAD] Hip hinge: Not hinging enough, lean forward at hips")
         status.append("bad")
 
-    if 160 <= back_alignment <= 180:
-        feedback.append("✅ Back: Neutral spine maintained")
+    if back_alignment >= 150:
+        feedback.append("[GOOD] Back: Spine reasonably straight")
         status.append("good")
+    elif back_alignment >= 130:
+        feedback.append("[WARN] Back: Slight forward lean, keep chest up")
+        status.append("warning")
     else:
-        feedback.append("❌ Back: Keep chest up and spine straight")
+        feedback.append("[BAD] Back: Excessive forward lean, straighten spine")
         status.append("bad")
 
-    if abs(left_knee - right_knee) <= 15:
-        feedback.append("✅ Knee symmetry: Both knees balanced")
+    if abs(left_knee - right_knee) <= 20:
+        feedback.append("[GOOD] Knee symmetry: Both knees balanced")
         status.append("good")
     else:
-        feedback.append("⚠️ Knee symmetry: Uneven — check for knee caving")
+        feedback.append("[WARN] Knee symmetry: Uneven knees, check for caving")
         status.append("warning")
 
     return feedback, status, {
@@ -316,44 +319,44 @@ def analyze_pushup(landmarks):
         get_keypoint(landmarks, 23)
     )
 
-    if 70 <= left_elbow <= 90:
-        feedback.append("✅ Elbow bend: Perfect depth")
+    if 60 <= left_elbow <= 110:
+        feedback.append("[GOOD] Elbow bend: Good depth")
         status.append("good")
-    elif left_elbow < 70:
-        feedback.append("⚠️ Elbow bend: Slightly too deep")
+    elif left_elbow < 60:
+        feedback.append("[WARN] Elbow bend: Very deep, slightly reduce range")
         status.append("warning")
-    elif left_elbow <= 120:
-        feedback.append("⚠️ Elbow bend: Go lower — chest not near floor")
-        status.append("warning")
-    else:
-        feedback.append("❌ Elbow bend: Too high — lower your chest")
-        status.append("bad")
-
-    if 160 <= body_line <= 180:
-        feedback.append("✅ Body line: Straight — core engaged")
-        status.append("good")
-    elif body_line < 160:
-        feedback.append("❌ Body line: Hips sagging — engage core")
-        status.append("bad")
-    else:
-        feedback.append("❌ Body line: Hips piking — lower your hips")
-        status.append("bad")
-
-    if elbow_flare <= 45:
-        feedback.append("✅ Elbow flare: Good — elbows close to body")
-        status.append("good")
-    elif elbow_flare <= 60:
-        feedback.append("⚠️ Elbow flare: Slightly wide — tuck elbows in")
+    elif left_elbow <= 140:
+        feedback.append("[WARN] Elbow bend: Go lower, chest not near floor")
         status.append("warning")
     else:
-        feedback.append("❌ Elbow flare: Too wide — risk of shoulder injury")
+        feedback.append("[BAD] Elbow bend: Too high, lower your chest significantly")
         status.append("bad")
 
-    if abs(left_elbow - right_elbow) <= 15:
-        feedback.append("✅ Arm symmetry: Both arms balanced")
+    if body_line >= 150:
+        feedback.append("[GOOD] Body line: Straight, core engaged")
+        status.append("good")
+    elif body_line >= 130:
+        feedback.append("[WARN] Body line: Slight sag, tighten core and glutes")
+        status.append("warning")
+    else:
+        feedback.append("[BAD] Body line: Hips sagging badly, engage core")
+        status.append("bad")
+
+    if elbow_flare <= 55:
+        feedback.append("[GOOD] Elbow flare: Good, elbows reasonably close")
+        status.append("good")
+    elif elbow_flare <= 70:
+        feedback.append("[WARN] Elbow flare: Slightly wide, tuck elbows in")
+        status.append("warning")
+    else:
+        feedback.append("[BAD] Elbow flare: Too wide, risk of shoulder injury")
+        status.append("bad")
+
+    if abs(left_elbow - right_elbow) <= 25:
+        feedback.append("[GOOD] Arm symmetry: Both arms balanced")
         status.append("good")
     else:
-        feedback.append("⚠️ Arm symmetry: Uneven arm bend — balance your push")
+        feedback.append("[WARN] Arm symmetry: Uneven, may be due to camera angle")
         status.append("warning")
 
     return feedback, status, {
@@ -386,38 +389,38 @@ def analyze_plank(landmarks):
     shoulder_y = get_keypoint(landmarks, 11)[1]
     neck_diff  = abs(nose_y - shoulder_y)
 
-    if 160 <= body_line <= 180:
-        feedback.append("✅ Body line: Perfect plank alignment")
+    if body_line >= 148:
+        feedback.append("[GOOD] Body line: Good plank alignment")
         status.append("good")
-    elif body_line < 160:
-        feedback.append("❌ Body line: Hips sagging — squeeze glutes and core")
-        status.append("bad")
-    else:
-        feedback.append("❌ Body line: Hips too high — lower them")
-        status.append("bad")
-
-    if 170 <= hip_position <= 180:
-        feedback.append("✅ Hip position: Level and stable")
-        status.append("good")
-    elif 155 <= hip_position < 170:
-        feedback.append("⚠️ Hip position: Slightly off — adjust hips")
+    elif body_line >= 130:
+        feedback.append("[WARN] Body line: Slight sag, squeeze glutes and core")
         status.append("warning")
     else:
-        feedback.append("❌ Hip position: Hips misaligned")
+        feedback.append("[BAD] Body line: Hips sagging badly, reset position")
         status.append("bad")
 
-    if 85 <= shoulder_angle <= 95:
-        feedback.append("✅ Shoulder: Elbows under shoulders")
+    if hip_position >= 155:
+        feedback.append("[GOOD] Hip position: Level and stable")
+        status.append("good")
+    elif hip_position >= 135:
+        feedback.append("[WARN] Hip position: Slightly off, adjust hips level")
+        status.append("warning")
+    else:
+        feedback.append("[BAD] Hip position: Hips misaligned significantly")
+        status.append("bad")
+
+    if 75 <= shoulder_angle <= 105:
+        feedback.append("[GOOD] Shoulder: Elbows well positioned")
         status.append("good")
     else:
-        feedback.append("⚠️ Shoulder: Shift elbows under shoulders")
+        feedback.append("[WARN] Shoulder: Shift elbows closer under shoulders")
         status.append("warning")
 
-    if neck_diff <= 0.08:
-        feedback.append("✅ Neck: Neutral alignment")
+    if neck_diff <= 0.12:
+        feedback.append("[GOOD] Neck: Neutral alignment")
         status.append("good")
     else:
-        feedback.append("⚠️ Neck: Keep head neutral — don't drop or raise")
+        feedback.append("[WARN] Neck: Keep head neutral, eyes toward floor")
         status.append("warning")
 
     return feedback, status, {
@@ -451,41 +454,41 @@ def analyze_pullup(landmarks):
         get_keypoint(landmarks, 27)
     )
 
-    if left_elbow < 90:
-        feedback.append("✅ Pull height: Chin above bar — full rep")
+    if left_elbow <= 100:
+        feedback.append("[GOOD] Pull height: Good, chin near or above bar")
         status.append("good")
-    elif left_elbow <= 120:
-        feedback.append("⚠️ Pull height: Pull higher — chin must clear bar")
+    elif left_elbow <= 130:
+        feedback.append("[WARN] Pull height: Pull higher, chin must clear bar")
         status.append("warning")
     else:
-        feedback.append("❌ Pull height: Not pulling high enough")
+        feedback.append("[BAD] Pull height: Not pulling high enough")
         status.append("bad")
 
-    if 170 <= right_elbow <= 180:
-        feedback.append("✅ Dead hang: Full range of motion")
+    if right_elbow >= 160:
+        feedback.append("[GOOD] Dead hang: Good range of motion")
         status.append("good")
-    elif 140 <= right_elbow < 170:
-        feedback.append("⚠️ Dead hang: Extend arms fully at bottom")
+    elif right_elbow >= 140:
+        feedback.append("[WARN] Dead hang: Try to extend arms more at bottom")
         status.append("warning")
     else:
-        feedback.append("❌ Dead hang: Arms not extended — hang lower")
+        feedback.append("[BAD] Dead hang: Arms not extended, hang lower")
         status.append("bad")
 
-    if shoulder_elevation < 90:
-        feedback.append("✅ Shoulder: Lats engaged — not shrugging")
+    if shoulder_elevation <= 100:
+        feedback.append("[GOOD] Shoulder: Lats engaged, not shrugging")
         status.append("good")
-    elif shoulder_elevation <= 110:
-        feedback.append("⚠️ Shoulder: Slight shrug — pull blades down")
+    elif shoulder_elevation <= 120:
+        feedback.append("[WARN] Shoulder: Slight shrug, pull blades down")
         status.append("warning")
     else:
-        feedback.append("❌ Shoulder: Shrugging — engage lats not traps")
+        feedback.append("[BAD] Shoulder: Shrugging, engage lats not traps")
         status.append("bad")
 
-    if 160 <= body_alignment <= 180:
-        feedback.append("✅ Body: No swinging — controlled movement")
+    if body_alignment >= 145:
+        feedback.append("[GOOD] Body: Controlled, minimal swinging")
         status.append("good")
     else:
-        feedback.append("❌ Body: Swinging detected — control movement")
+        feedback.append("[BAD] Body: Swinging detected, control your movement")
         status.append("bad")
 
     return feedback, status, {
@@ -505,11 +508,53 @@ def get_exercise_from_user():
         exercise = input("\nEnter exercise (squat / pushup / plank / pullup): ").strip().lower()
         if exercise in valid:
             return exercise
-        print("❌ Invalid — please enter: squat, pushup, plank, or pullup")
+        print("[BAD] Invalid, please enter: squat, pushup, plank, or pullup")
+
+def detect_camera_angle(landmarks):
+    """
+    Detects approximate camera viewing angle.
+    Returns: 'front', 'side', 'diagonal', or 'unknown'
+    """
+    left_shoulder  = get_keypoint(landmarks, 11)
+    right_shoulder = get_keypoint(landmarks, 12)
+    left_hip       = get_keypoint(landmarks, 23)
+    right_hip      = get_keypoint(landmarks, 24)
+
+    shoulder_x_diff = abs(left_shoulder[0] - right_shoulder[0])
+    hip_x_diff      = abs(left_hip[0] - right_hip[0])
+
+    avg_diff = (shoulder_x_diff + hip_x_diff) / 2
+
+    if avg_diff >= 0.15:
+        return "front"
+    elif avg_diff <= 0.06:
+        return "side"
+    else:
+        return "diagonal"
+
+def get_angle_tip(camera_angle, exercise):
+    """Return best camera angle tip per exercise"""
+    ideal = {
+        "squat":   "front",
+        "pushup":  "side",
+        "plank":   "side",
+        "pullup":  "front"
+    }
+    best = ideal.get(exercise, "front")
+
+    if camera_angle == best:
+        return f"[GOOD] Camera angle: {camera_angle.upper()} view, ideal for {exercise}"
+    else:
+        return f"[WARN] Camera angle: {camera_angle.upper()} view detected, {best.upper()} view recommended for {exercise}"
 
 def analyze_pose(landmarks, image, w, h):
     exercise = get_exercise_from_user()
-    print(f"\n🏋️ Exercise: {exercise.upper()}")
+    print(f"\nExercise: {exercise.upper()}")
+
+    # Detect camera angle
+    camera_angle = detect_camera_angle(landmarks)
+    angle_tip    = get_angle_tip(camera_angle, exercise)
+    print(f"\n{angle_tip}")
 
     if exercise == "squat":
         feedback, status, angles = analyze_squat(landmarks)
@@ -522,29 +567,31 @@ def analyze_pose(landmarks, image, w, h):
     else:
         return
 
+    # Prepend camera tip to feedback
+    feedback.insert(0, angle_tip)
+    status.insert(0, "good" if "GOOD" in angle_tip else "warning")
+
     # Print to terminal
-    print("\n📐 Joint Angles:")
+    print("\nJoint Angles:")
     for joint, angle in angles.items():
-        print(f"  {joint}: {angle}°")
-    print("\n📋 Feedback:")
+        print(f"  {joint}: {angle}")
+    print("\nFeedback:")
     for f in feedback:
         print(f"  {f}")
     good = sum(1 for s in status if s == "good")
-    print(f"\n🏁 Score: {good}/{len(status)} checks passed")
+    print(f"\nScore: {good}/{len(status)} checks passed")
 
     # Draw on image
-    status_map = build_status_map(exercise, angles, status)
+    status_map = build_status_map(exercise, angles, status[1:])  # skip camera tip status
     draw_skeleton(image, landmarks, w, h, status_map)
     draw_angles_for_exercise(image, landmarks, exercise, w, h)
     output = draw_feedback_panel(image, exercise, feedback, angles, status, h, w)
 
-    # Save & display
     cv2.imwrite("output.jpg", output)
     cv2.imshow("Workout Posture Analysis", output)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
-    print("\n✅ Output saved as output.jpg")
-
+    print("\n[GOOD] Output saved as output.jpg")
 # ─────────────────────────────────────────
 # MAIN ENTRY
 # ─────────────────────────────────────────
@@ -570,4 +617,4 @@ with PoseLandmarker.create_from_options(options) as landmarker:
         h, w      = image.shape[:2]
         analyze_pose(landmarks, image, w, h)
     else:
-        print("❌ No pose detected — ensure full body is visible")
+        print("[BAD] No pose detected, ensure full body is visible")
