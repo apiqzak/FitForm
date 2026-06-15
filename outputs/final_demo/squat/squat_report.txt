@@ -1,0 +1,23 @@
+Workout Video Posture Analysis
+Exercise: SQUAT
+Input: squat\squat_27.mp4
+Output video: batch_video_results\squat\all_results\squat_27_output.mp4
+Frames processed: 130
+Frames with pose: 130
+Frames without pose: 0
+Average score: 3.97/5 checks passed
+Most common phase: STANDING POSITION
+
+Common Feedback:
+- [GOOD] Back: Spine reasonably straight
+- [GOOD] Camera angle: FRONT view, ideal for squat
+- [GOOD] Knee symmetry: Both knees balanced
+- [BAD] Hip hinge: Not hinging enough at hips
+- [GOOD] Standing: Fully extended at top
+- [GOOD] Knee depth: Full squat depth achieved
+- [GOOD] Hip hinge: Good forward lean
+- [WARN] Mid-rep captured, try photo at top or bottom
+
+Warnings:
+- Video analysis was limited to the first 30.0 second(s).
+- Video was sampled every 5 frame(s).

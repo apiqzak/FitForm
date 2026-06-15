@@ -1,0 +1,24 @@
+Workout Video Posture Analysis
+Exercise: PULLUP
+Input: pull up\pull up_17.mp4
+Output video: batch_video_results\pullup\all_results\pull up_17_output.mp4
+Frames processed: 15
+Frames with pose: 14
+Frames without pose: 1
+Average score: 2.93/4 checks passed
+Most common phase: TOP POSITION
+
+Common Feedback:
+- [GOOD] Shoulder: Lats engaged, not shrugging
+- [GOOD] Body: Controlled, minimal swinging
+- [GOOD] Camera angle: FRONT view, ideal for pullup
+- [GOOD] Pull height: Chin at or above bar
+- [WARN] Mid-rep captured, try photo at top or bottom
+- [WARN] Camera angle: SIDE view detected, FRONT view recommended for pullup
+- [BAD] Body: Swinging detected, control movement
+- [BAD] Shoulder: Shrugging, engage lats not traps
+
+Warnings:
+- 1 processed frame(s) had no detectable pose.
+- Video analysis was limited to the first 30.0 second(s).
+- Video was sampled every 5 frame(s).

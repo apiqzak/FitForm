@@ -7,6 +7,9 @@ __pycache__/
 
 venv/
 
+outputs/temp/
+outputs/batch_video_results/
+
 openclaw_output.jpg
 openclaw_output.mp4
 openclaw_keyframe.jpg
@@ -20,5 +23,7 @@ fitform_*_report.json
 *_video_output.mp4
 *_keyframe.jpg
 output.jpg
+batch_video_results/
+final_demo_videos/
 
 *.log

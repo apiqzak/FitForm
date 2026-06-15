@@ -14,6 +14,7 @@ from test_pose import (
     draw_angles_for_exercise,
     draw_feedback_panel,
     draw_skeleton,
+    explain_score,
 )
 
 
@@ -97,6 +98,7 @@ def _format_video_report(summary):
         f"Frames with pose: {summary['frames_with_pose']}",
         f"Frames without pose: {summary['frames_without_pose']}",
         f"Average score: {summary['average_score']}/{summary['total_checks']} checks passed",
+        f"Score Explanation: {summary['score_explanation']}",
         f"Most common phase: {summary['most_common_phase']}",
         "",
         "Common Feedback:",
@@ -139,6 +141,9 @@ def analyze_video_file(
 
     if frame_step < 1:
         raise ValueError("frame_step must be 1 or higher")
+
+    if max_seconds is not None and max_seconds <= 0:
+        raise ValueError("max_seconds must be greater than 0")
 
     cap = cv2.VideoCapture(input_path)
     if not cap.isOpened():
@@ -232,6 +237,11 @@ def analyze_video_file(
     if frames_without_pose:
         warnings.append(f"{frames_without_pose} processed frame(s) had no detectable pose.")
 
+    if processed_frames > 0 and frames_with_pose == 0:
+        warnings.append(
+            "No clear body pose was detected in the sampled frames. Try a clearer full-body video with one person visible."
+        )
+
     if max_seconds is not None:
         warnings.append(f"Video analysis was limited to the first {max_seconds} second(s).")
 
@@ -277,6 +287,10 @@ def analyze_video_file(
         "max_seconds": max_seconds,
         "average_score": average_score,
         "total_checks": total_checks,
+        "score_explanation": (
+            explain_score(average_score, total_checks)
+            + " For video, this is the average score across sampled frames where a pose was detected."
+        ),
         "most_common_phase": most_common_phase,
         "phase_counts": dict(phase_counts),
         "common_feedback": common_feedback,

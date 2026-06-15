@@ -1,0 +1,23 @@
+Workout Video Posture Analysis
+Exercise: PUSHUP
+Input: push up\push-up_15.mp4
+Output video: batch_video_results\pushup\all_results\push-up_15_output.mp4
+Frames processed: 17
+Frames with pose: 17
+Frames without pose: 0
+Average score: 4.76/5 checks passed
+Most common phase: DOWN POSITION
+
+Common Feedback:
+- [GOOD] Camera angle: SIDE view, ideal for pushup
+- [GOOD] Elbow flare: Good, elbows close to body
+- [GOOD] Arm symmetry: Both arms balanced
+- [GOOD] Body line: Good alignment at bottom
+- [GOOD] Elbow bend: Good depth at bottom
+- [GOOD] Body line: Straight — core engaged
+- [WARN] Mid-rep captured, try photo at top or bottom
+- [GOOD] Elbow: Arms fully extended at top
+
+Warnings:
+- Video analysis was limited to the first 30.0 second(s).
+- Video was sampled every 5 frame(s).

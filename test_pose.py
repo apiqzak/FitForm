@@ -1,4 +1,4 @@
-import cv2
+﻿import cv2
 import mediapipe as mp
 import numpy as np
 
@@ -10,9 +10,23 @@ IDEAL_CAMERA_ANGLES = {
     "pullup": "front"
 }
 
-# ─────────────────────────────────────────
+STATUS_COLORS = {
+    "good": (0, 220, 100),
+    "warning": (0, 200, 255),
+    "bad": (60, 80, 255),
+    "neutral": (190, 190, 190),
+}
+
+STATUS_LABELS = {
+    "good": "GOOD",
+    "warning": "WARN",
+    "bad": "BAD",
+    "neutral": "INFO",
+}
+
+# -----------------------------------------
 # HELPER FUNCTIONS
-# ─────────────────────────────────────────
+# -----------------------------------------
 
 def calculate_angle(a, b, c):
     a, b, c = np.array(a), np.array(b), np.array(c)
@@ -30,9 +44,22 @@ def get_pixel(landmarks, index, w, h):
     lm = landmarks[index]
     return (int(lm.x * w), int(lm.y * h))
 
-# ─────────────────────────────────────────
+def get_status_color(status):
+    return STATUS_COLORS.get(status, STATUS_COLORS["neutral"])
+
+def put_text_with_outline(image, text, position, scale, color, thickness=2):
+    cv2.putText(
+        image, text, position, cv2.FONT_HERSHEY_SIMPLEX,
+        scale, (20, 20, 20), thickness + 3, cv2.LINE_AA
+    )
+    cv2.putText(
+        image, text, position, cv2.FONT_HERSHEY_SIMPLEX,
+        scale, color, thickness, cv2.LINE_AA
+    )
+
+# -----------------------------------------
 # DRAWING FUNCTIONS
-# ─────────────────────────────────────────
+# -----------------------------------------
 
 def draw_skeleton(image, landmarks, w, h, status_map):
     """
@@ -52,17 +79,17 @@ def draw_skeleton(image, landmarks, w, h, status_map):
     for start, end in connections:
         p1 = get_pixel(landmarks, start, w, h)
         p2 = get_pixel(landmarks, end, w, h)
-        cv2.line(image, p1, p2, (200, 200, 200), 2)
+        cv2.line(image, p1, p2, (35, 35, 35), 6, cv2.LINE_AA)
+        cv2.line(image, p1, p2, (235, 235, 235), 3, cv2.LINE_AA)
 
     for i in range(33):
         px, py = get_pixel(landmarks, i, w, h)
         s = status_map.get(i, "neutral")
-        color = (0, 255, 100) if s == "good" else \
-                (0, 200, 255) if s == "warning" else \
-                (0, 60, 255)  if s == "bad" else \
-                (180, 180, 180)
-        cv2.circle(image, (px, py), 7, color, -1)
-        cv2.circle(image, (px, py), 7, (255, 255, 255), 1)
+        color = get_status_color(s)
+        radius = 9 if s != "neutral" else 7
+        cv2.circle(image, (px, py), radius + 2, (30, 30, 30), -1, cv2.LINE_AA)
+        cv2.circle(image, (px, py), radius, color, -1, cv2.LINE_AA)
+        cv2.circle(image, (px, py), radius, (255, 255, 255), 2, cv2.LINE_AA)
 
 def draw_angle_on_joint(image, landmarks, a, b, c, w, h, offset=(8, -8)):
     angle = calculate_angle(
@@ -71,9 +98,14 @@ def draw_angle_on_joint(image, landmarks, a, b, c, w, h, offset=(8, -8)):
         get_keypoint(landmarks, c)
     )
     px, py = get_pixel(landmarks, b, w, h)
-    cv2.putText(image, f"{angle:.0f}deg",
-                (px + offset[0], py + offset[1]),  # use offset
-                cv2.FONT_HERSHEY_SIMPLEX, 0.45, (255, 255, 0), 1)
+    put_text_with_outline(
+        image,
+        f"{angle:.0f}deg",
+        (px + offset[0], py + offset[1]),
+        0.78,
+        (0, 255, 255),
+        2,
+    )
     return angle
 
 def draw_angles_for_exercise(image, landmarks, exercise, w, h):
@@ -153,124 +185,146 @@ def build_status_map(exercise, angles, statuses):
 
     return mapping
 
+def explain_score(score, total):
+    if total <= 0:
+        return "No posture checks were scored because no reliable pose was detected."
+    return (
+        f"The score means {score} out of {total} posture checks passed. "
+        "Each check is based on the camera angle and exercise-specific form rules. "
+        "Items marked [GOOD] count as passed checks, while [WARN] and [BAD] show areas to improve."
+    )
+
 def draw_feedback_panel(image, exercise, feedback, angles, statuses, h, w, phase="", phase_desc=""):
-    """Draw dark side panel — height expands to fit all content"""
-    panel_w = 340
+    """Draw a full-width report panel below the image for chat readability."""
+    panel_w = max(w, 900)
+    margin = 24
+    wrap_chars = max(52, int((panel_w - margin * 2) / 13))
 
-    # ── Pre-calculate total height needed ──
-    def estimate_height():
-        y = 120  # header space
-        y += 20  # JOINT ANGLES label
-        y += len(angles) * 20  # angle rows
-        y += 30  # divider + FEEDBACK label
-        for fb in feedback:
-            # estimate wrapped lines
-            words = fb.split()
-            lines, current = 1, ""
-            for word in words:
-                if len(current + word) < 38:
-                    current += word + " "
-                else:
-                    lines += 1
-                    current = word + " "
-            y += lines * 17 + 6
-        y += 80  # score + result + padding
-        return max(y, h)  # never smaller than image height
+    def wrap_lines(text):
+        words = str(text).split()
+        lines, current = [], ""
+        for word in words:
+            candidate = f"{current} {word}".strip()
+            if len(candidate) <= wrap_chars:
+                current = candidate
+            else:
+                if current:
+                    lines.append(current)
+                current = word
+        if current:
+            lines.append(current)
+        return lines or [""]
 
-    panel_h = estimate_height()
+    phase_lines = wrap_lines(phase_desc)
+    feedback_lines = []
+    for i, fb in enumerate(feedback):
+        status = statuses[i] if i < len(statuses) else "neutral"
+        feedback_lines.append((status, wrap_lines(fb)))
 
-    # ── Create panel ──
+    good_count = sum(1 for s in statuses if s == "good")
+    warning_count = sum(1 for s in statuses if s == "warning")
+    bad_count = sum(1 for s in statuses if s == "bad")
+    total = len(statuses)
+
+    panel_h = 190
+    panel_h += len(phase_lines) * 26
+    panel_h += 68
+    panel_h += len(angles) * 32
+    panel_h += 70
+    panel_h += sum(len(lines) * 28 + 14 for _, lines in feedback_lines)
+    panel_h += 220
+    panel_h = max(panel_h, 560)
+
     panel = np.zeros((panel_h, panel_w, 3), dtype=np.uint8)
     panel[:] = (25, 25, 25)
 
-    def put(text, x, y, color, scale=0.45, thickness=1):
+    def put(text, x, y, color, scale=0.78, thickness=2):
         if y < panel_h - 10:  # only draw if within bounds
             cv2.putText(panel, text, (x, y),
-                        cv2.FONT_HERSHEY_SIMPLEX, scale, color, thickness)
+                        cv2.FONT_HERSHEY_SIMPLEX, scale, color, thickness, cv2.LINE_AA)
 
     def divider(y):
         if y < panel_h - 10:
-            cv2.line(panel, (10, y), (panel_w - 10, y), (60, 60, 60), 1)
+            cv2.line(panel, (margin, y), (panel_w - margin, y), (70, 70, 70), 2)
 
-    # ── Header ──
-    put("POSTURE ANALYSIS", 10, 30, (0, 210, 255), 0.6, 2)
-    put(f"Exercise: {exercise.upper()}", 10, 55, (200, 200, 200), 0.5)
-    put(f"Phase: {phase}", 10, 75, (0, 255, 180), 0.45)
-    put(phase_desc, 10, 93, (150, 150, 150), 0.38)
-    divider(103)
+    def legend_item(x, y, status):
+        color = get_status_color(status)
+        label = STATUS_LABELS.get(status, "INFO")
+        cv2.circle(panel, (x, y - 6), 10, color, -1, cv2.LINE_AA)
+        cv2.circle(panel, (x, y - 6), 10, (255, 255, 255), 1, cv2.LINE_AA)
+        put(label, x + 18, y, color, 0.58, 2)
 
-    # ── Joint Angles ──
-    y = 120
-    put("JOINT ANGLES", 10, y, (150, 150, 150), 0.4)
-    y += 20
+    put("POSTURE ANALYSIS", margin, 48, (0, 210, 255), 1.0, 3)
+    put(f"Exercise: {exercise.upper()}", margin, 90, (235, 235, 235), 0.78, 2)
+    put(f"Phase: {phase}", margin, 128, (0, 255, 180), 0.78, 2)
+    y = 164
+    for line in phase_lines:
+        put(line, margin, y, (200, 200, 200), 0.62, 1)
+        y += 26
+    y += 10
+    legend_item(margin, y, "good")
+    legend_item(margin + 150, y, "warning")
+    legend_item(margin + 300, y, "bad")
+    y += 32
+    put(
+        f"Checks: {good_count} good | {warning_count} warning | {bad_count} bad",
+        margin,
+        y,
+        (230, 230, 230),
+        0.62,
+        1,
+    )
+    y += 18
+    divider(y + 8)
+    y += 42
+
+    put("JOINT ANGLES", margin, y, (190, 190, 190), 0.7, 2)
+    y += 34
     for joint, angle in angles.items():
-        put(f"  {joint}: {angle}deg", 10, y, (255, 220, 80), 0.42)
-        y += 20
-    divider(y + 5)
-    y += 22
+        put(f"{joint}: {angle} deg", margin + 16, y, (255, 230, 90), 0.68, 2)
+        y += 32
+    divider(y + 8)
+    y += 42
 
-    # ── Feedback ──
-    put("FEEDBACK", 10, y, (150, 150, 150), 0.4)
-    y += 20
-    for i, fb in enumerate(feedback):
-        s = statuses[i] if i < len(statuses) else "neutral"
-        color = (0, 220, 100) if s == "good"    else \
-                (0, 200, 255) if s == "warning"  else \
-                (60, 80, 255)
+    put("FEEDBACK", margin, y, (190, 190, 190), 0.7, 2)
+    y += 36
+    for status, lines in feedback_lines:
+        color = get_status_color(status)
+        label = STATUS_LABELS.get(status, "INFO")
+        for line in lines:
+            put(f"[{label}] {line}" if line and not line.startswith("[") else line, margin + 16, y, color, 0.68, 2)
+            y += 28
+        y += 14
 
-        words = fb.split()
-        line_text = ""
-        for word in words:
-            if len(line_text + word) < 38:
-                line_text += word + " "
-            else:
-                put(line_text, 10, y, color)
-                y += 17
-                line_text = word + " "
-        if line_text:
-            put(line_text, 10, y, color)
-            y += 22
+    divider(y + 8)
+    y += 42
 
-    divider(y + 5)
-    y += 20
+    put(f"Score: {good_count}/{total} checks passed", margin, y, (235, 235, 235), 0.82, 2)
+    y += 44
 
-    # ── Score & Result ──
-    good  = sum(1 for s in statuses if s == "good")
-    bad   = sum(1 for s in statuses if s == "bad")
-    total = len(statuses)
-
-    put(f"Score: {good}/{total} checks passed", 10, y, (200, 200, 200), 0.45)
-    y += 25
-
-    if bad == 0 and sum(1 for s in statuses if s == "warning") == 0:
+    if bad_count == 0 and warning_count == 0:
         result, color = "EXCELLENT FORM", (0, 255, 100)
-    elif bad == 0:
+    elif bad_count == 0:
         result, color = "GOOD, MINOR ADJUSTMENTS", (0, 200, 255)
-    elif bad <= total // 2:
+    elif bad_count <= total // 2:
         result, color = "NEEDS IMPROVEMENT", (0, 140, 255)
     else:
         result, color = "POOR FORM, REVIEW NEEDED", (0, 60, 255)
 
-    put(result, 10, y, color, 0.5, 2)
+    put(result, margin, y, color, 0.88, 3)
 
-    # ── Resize image to match panel height if needed ──
-    if panel_h > h:
-        scale  = panel_h / h
-        new_w  = int(w * scale)
-        image  = cv2.resize(image, (new_w, panel_h))
-    else:
-        # Pad panel to match image height
-        pad   = h - panel_h
-        extra = np.zeros((pad, panel_w, 3), dtype=np.uint8)
-        extra[:] = (25, 25, 25)
-        panel = np.vstack([panel, extra])
+    if w < panel_w:
+        pad = panel_w - w
+        image = cv2.copyMakeBorder(image, 0, 0, 0, pad, cv2.BORDER_CONSTANT, value=(0, 0, 0))
+    elif w > panel_w:
+        panel = cv2.copyMakeBorder(panel, 0, 0, 0, w - panel_w, cv2.BORDER_CONSTANT, value=(25, 25, 25))
 
-    combined = np.hstack([image, panel])
+    combined = np.vstack([image, panel])
     return combined
 
-# ─────────────────────────────────────────
+# -----------------------------------------
 # EXERCISE ANALYSIS FUNCTIONS
-# ─────────────────────────────────────────
+# -----------------------------------------
 
 def detect_squat_phase(left_knee):
     if left_knee <= 110:
@@ -369,9 +423,9 @@ def detect_pushup_phase(left_elbow, right_elbow):
     avg_elbow = (left_elbow + right_elbow) / 2
 
     if avg_elbow <= 120:
-        return "DOWN POSITION", "Chest near floor — bottom of rep"
+        return "DOWN POSITION", "Chest near floor - bottom of rep"
     elif avg_elbow >= 150:
-        return "UP POSITION", "Arms extended — top of rep"
+        return "UP POSITION", "Arms extended - top of rep"
     else:
         return "MID POSITION", "Mid-rep transition"
 
@@ -429,13 +483,13 @@ def analyze_pushup(landmarks):
     if phase == "UP POSITION":
         # At top, body must be very straight
         if body_line >= 160:
-            feedback.append("[GOOD] Body line: Straight — core engaged")
+            feedback.append("[GOOD] Body line: Straight - core engaged")
             status.append("good")
         elif body_line >= 145:
-            feedback.append("[WARN] Body line: Slight sag — tighten core at top")
+            feedback.append("[WARN] Body line: Slight sag - tighten core at top")
             status.append("warning")
         else:
-            feedback.append("[BAD] Body line: Hips sagging at top — engage core")
+            feedback.append("[BAD] Body line: Hips sagging at top - engage core")
             status.append("bad")
 
     elif phase == "DOWN POSITION":
@@ -444,15 +498,15 @@ def analyze_pushup(landmarks):
             feedback.append("[GOOD] Body line: Good alignment at bottom")
             status.append("good")
         elif body_line >= 125:
-            feedback.append("[WARN] Body line: Slight sag — keep core tight")
+            feedback.append("[WARN] Body line: Slight sag - keep core tight")
             status.append("warning")
         else:
-            feedback.append("[BAD] Body line: Hips sagging badly — reset form")
+            feedback.append("[BAD] Body line: Hips sagging badly - reset form")
             status.append("bad")
 
     else:  # MID
         if body_line >= 148:
-            feedback.append("[GOOD] Body line: Straight — core engaged")
+            feedback.append("[GOOD] Body line: Straight - core engaged")
             status.append("good")
         else:
             feedback.append("[WARN] Body line: Keep body straight throughout rep")
@@ -631,9 +685,9 @@ def analyze_pullup(landmarks):
         "Body Alignment": body_alignment
     }, phase, phase_desc
 
-# ─────────────────────────────────────────
+# -----------------------------------------
 # USER INPUT & MAIN ANALYZER
-# ─────────────────────────────────────────
+# -----------------------------------------
 
 def get_exercise_from_user():
     while True:
@@ -713,6 +767,7 @@ def analyze_landmarks_for_exercise(landmarks, image_width, image_height, exercis
         "statuses": statuses,
         "score": score,
         "total": len(statuses),
+        "score_explanation": explain_score(score, len(statuses)),
         "image_width": image_width,
         "image_height": image_height
     }
@@ -768,6 +823,7 @@ def format_report(report):
         f"Phase: {report['phase']}",
         f"Note: {report['phase_desc']}",
         f"Score: {report['score']}/{report['total']} checks passed",
+        f"Score Explanation: {report.get('score_explanation', explain_score(report['score'], report['total']))}",
         "",
         "Joint Angles:"
     ]
@@ -818,11 +874,12 @@ def analyze_image_file(img_path, exercise, output_path="output.jpg", show_window
         if close_landmarker:
             landmarker.close()
 
-# ─────────────────────────────────────────
+# -----------------------------------------
 # MAIN ENTRY
-# ─────────────────────────────────────────
+# -----------------------------------------
 
 if __name__ == "__main__":
     img_path = input("Enter image filename (e.g. workout.jpg): ").strip()
     exercise = get_exercise_from_user()
     analyze_image_file(img_path, exercise, output_path="output.jpg", show_window=True)
+

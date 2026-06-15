@@ -1,0 +1,23 @@
+Workout Video Posture Analysis
+Exercise: PLANK
+Input: plank\plank_5.mp4
+Output video: batch_video_results\plank\all_results\plank_5_output.mp4
+Frames processed: 151
+Frames with pose: 151
+Frames without pose: 0
+Average score: 4.71/5 checks passed
+Most common phase: HOLD POSITION
+
+Common Feedback:
+- [GOOD] Hip position: Level and stable
+- [GOOD] Neck: Neutral alignment
+- [GOOD] Body line: Good plank alignment
+- [GOOD] Camera angle: SIDE view, ideal for plank
+- [GOOD] Shoulder: Elbows well positioned
+- [WARN] Shoulder: Shift elbows closer under shoulders
+- [WARN] Camera angle: DIAGONAL view detected, SIDE view recommended for plank
+- [WARN] Body line: Slight sag, squeeze glutes and core
+
+Warnings:
+- Video analysis was limited to the first 30.0 second(s).
+- Video was sampled every 5 frame(s).

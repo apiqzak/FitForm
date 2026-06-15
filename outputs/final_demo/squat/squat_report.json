@@ -1,0 +1,2643 @@
+{
+  "media_type": "video",
+  "input_path": "squat\\squat_27.mp4",
+  "exercise": "squat",
+  "output_video_path": "batch_video_results\\squat\\all_results\\squat_27_output.mp4",
+  "representative_frame_path": "batch_video_results\\squat\\all_results\\squat_27_keyframe.jpg",
+  "report_path": "batch_video_results\\squat\\all_results\\squat_27_report.txt",
+  "json_path": "batch_video_results\\squat\\all_results\\squat_27_report.json",
+  "fps": 29.97,
+  "total_frames": 647,
+  "width": 1280,
+  "height": 720,
+  "duration_sec": 21.59,
+  "processed_frames": 130,
+  "frames_with_pose": 130,
+  "frames_without_pose": 0,
+  "frame_step": 5,
+  "max_seconds": 30.0,
+  "average_score": 3.97,
+  "total_checks": 5,
+  "most_common_phase": "STANDING POSITION",
+  "phase_counts": {
+    "STANDING POSITION": 79,
+    "MID POSITION": 18,
+    "BOTTOM POSITION": 33
+  },
+  "common_feedback": [
+    "[GOOD] Back: Spine reasonably straight",
+    "[GOOD] Camera angle: FRONT view, ideal for squat",
+    "[GOOD] Knee symmetry: Both knees balanced",
+    "[BAD] Hip hinge: Not hinging enough at hips",
+    "[GOOD] Standing: Fully extended at top",
+    "[GOOD] Knee depth: Full squat depth achieved",
+    "[GOOD] Hip hinge: Good forward lean",
+    "[WARN] Mid-rep captured, try photo at top or bottom"
+  ],
+  "warnings": [
+    "Video analysis was limited to the first 30.0 second(s).",
+    "Video was sampled every 5 frame(s)."
+  ],
+  "frame_reports": [
+    {
+      "frame_index": 0,
+      "timestamp_sec": 0.0,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.11,
+        "Right Knee": 179.97,
+        "Hip Hinge": 174.55,
+        "Back Alignment": 175.55
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 5,
+      "timestamp_sec": 0.17,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 177.91,
+        "Right Knee": 179.91,
+        "Hip Hinge": 174.27,
+        "Back Alignment": 175.37
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 10,
+      "timestamp_sec": 0.33,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 177.78,
+        "Right Knee": 179.65,
+        "Hip Hinge": 174.27,
+        "Back Alignment": 175.44
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 15,
+      "timestamp_sec": 0.5,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.24,
+        "Right Knee": 179.93,
+        "Hip Hinge": 175.44,
+        "Back Alignment": 176.37
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 20,
+      "timestamp_sec": 0.67,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 177.74,
+        "Right Knee": 179.01,
+        "Hip Hinge": 173.91,
+        "Back Alignment": 175.08
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 25,
+      "timestamp_sec": 0.83,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 177.72,
+        "Right Knee": 179.16,
+        "Hip Hinge": 174.56,
+        "Back Alignment": 175.72
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 30,
+      "timestamp_sec": 1.0,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 177.58,
+        "Right Knee": 179.86,
+        "Hip Hinge": 174.2,
+        "Back Alignment": 175.44
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 35,
+      "timestamp_sec": 1.17,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 177.59,
+        "Right Knee": 179.86,
+        "Hip Hinge": 174.2,
+        "Back Alignment": 175.44
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 40,
+      "timestamp_sec": 1.33,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 177.84,
+        "Right Knee": 179.33,
+        "Hip Hinge": 174.27,
+        "Back Alignment": 175.38
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 45,
+      "timestamp_sec": 1.5,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 177.55,
+        "Right Knee": 179.57,
+        "Hip Hinge": 173.52,
+        "Back Alignment": 174.78
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 50,
+      "timestamp_sec": 1.67,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 177.56,
+        "Right Knee": 179.89,
+        "Hip Hinge": 173.72,
+        "Back Alignment": 174.99
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 55,
+      "timestamp_sec": 1.84,
+      "phase": "STANDING POSITION",
+      "score": 3,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.03,
+        "Right Knee": 178.7,
+        "Hip Hinge": 174.08,
+        "Back Alignment": 175.08
+      },
+      "feedback": [
+        "[WARN] Camera angle: DIAGONAL view detected, FRONT view recommended for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 60,
+      "timestamp_sec": 2.0,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.28,
+        "Right Knee": 178.42,
+        "Hip Hinge": 173.55,
+        "Back Alignment": 174.4
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 65,
+      "timestamp_sec": 2.17,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.39,
+        "Right Knee": 178.99,
+        "Hip Hinge": 173.9,
+        "Back Alignment": 174.73
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 70,
+      "timestamp_sec": 2.34,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.16,
+        "Right Knee": 178.88,
+        "Hip Hinge": 173.66,
+        "Back Alignment": 174.62
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 75,
+      "timestamp_sec": 2.5,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 177.16,
+        "Right Knee": 178.84,
+        "Hip Hinge": 173.82,
+        "Back Alignment": 175.27
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 80,
+      "timestamp_sec": 2.67,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 177.87,
+        "Right Knee": 179.07,
+        "Hip Hinge": 173.47,
+        "Back Alignment": 174.62
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 85,
+      "timestamp_sec": 2.84,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.1,
+        "Right Knee": 179.22,
+        "Hip Hinge": 174.25,
+        "Back Alignment": 175.21
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 90,
+      "timestamp_sec": 3.0,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.56,
+        "Right Knee": 179.18,
+        "Hip Hinge": 175.02,
+        "Back Alignment": 175.79
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 95,
+      "timestamp_sec": 3.17,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.0,
+        "Right Knee": 179.78,
+        "Hip Hinge": 173.89,
+        "Back Alignment": 175.01
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 100,
+      "timestamp_sec": 3.34,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.82,
+        "Right Knee": 179.34,
+        "Hip Hinge": 174.76,
+        "Back Alignment": 175.42
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 105,
+      "timestamp_sec": 3.5,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.39,
+        "Right Knee": 178.76,
+        "Hip Hinge": 173.72,
+        "Back Alignment": 174.63
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 110,
+      "timestamp_sec": 3.67,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 179.62,
+        "Right Knee": 179.38,
+        "Hip Hinge": 175.43,
+        "Back Alignment": 175.65
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 115,
+      "timestamp_sec": 3.84,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 175.34,
+        "Right Knee": 176.21,
+        "Hip Hinge": 172.49,
+        "Back Alignment": 175.34
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 120,
+      "timestamp_sec": 4.0,
+      "phase": "MID POSITION",
+      "score": 3,
+      "total": 5,
+      "angles": {
+        "Left Knee": 148.15,
+        "Right Knee": 154.07,
+        "Hip Hinge": 148.63,
+        "Back Alignment": 173.37
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[WARN] Mid-rep captured, try photo at top or bottom",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 125,
+      "timestamp_sec": 4.17,
+      "phase": "MID POSITION",
+      "score": 3,
+      "total": 5,
+      "angles": {
+        "Left Knee": 142.11,
+        "Right Knee": 145.62,
+        "Hip Hinge": 144.02,
+        "Back Alignment": 173.82
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[WARN] Mid-rep captured, try photo at top or bottom",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 130,
+      "timestamp_sec": 4.34,
+      "phase": "MID POSITION",
+      "score": 3,
+      "total": 5,
+      "angles": {
+        "Left Knee": 130.68,
+        "Right Knee": 116.41,
+        "Hip Hinge": 131.55,
+        "Back Alignment": 169.16
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[WARN] Mid-rep captured, try photo at top or bottom",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 135,
+      "timestamp_sec": 4.5,
+      "phase": "BOTTOM POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 100.58,
+        "Right Knee": 95.16,
+        "Hip Hinge": 105.73,
+        "Back Alignment": 168.75
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[WARN] Knee depth: Squat deeper at bottom position",
+        "[GOOD] Hip hinge: Good forward lean",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 140,
+      "timestamp_sec": 4.67,
+      "phase": "BOTTOM POSITION",
+      "score": 5,
+      "total": 5,
+      "angles": {
+        "Left Knee": 74.4,
+        "Right Knee": 77.62,
+        "Hip Hinge": 80.0,
+        "Back Alignment": 168.24
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[GOOD] Hip hinge: Good forward lean",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 145,
+      "timestamp_sec": 4.84,
+      "phase": "BOTTOM POSITION",
+      "score": 5,
+      "total": 5,
+      "angles": {
+        "Left Knee": 58.03,
+        "Right Knee": 49.15,
+        "Hip Hinge": 60.84,
+        "Back Alignment": 162.09
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[GOOD] Hip hinge: Good forward lean",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 150,
+      "timestamp_sec": 5.0,
+      "phase": "BOTTOM POSITION",
+      "score": 5,
+      "total": 5,
+      "angles": {
+        "Left Knee": 40.9,
+        "Right Knee": 34.34,
+        "Hip Hinge": 48.65,
+        "Back Alignment": 164.71
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[GOOD] Hip hinge: Good forward lean",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 155,
+      "timestamp_sec": 5.17,
+      "phase": "BOTTOM POSITION",
+      "score": 5,
+      "total": 5,
+      "angles": {
+        "Left Knee": 37.88,
+        "Right Knee": 26.29,
+        "Hip Hinge": 40.67,
+        "Back Alignment": 160.16
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[GOOD] Hip hinge: Good forward lean",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 160,
+      "timestamp_sec": 5.34,
+      "phase": "BOTTOM POSITION",
+      "score": 5,
+      "total": 5,
+      "angles": {
+        "Left Knee": 37.79,
+        "Right Knee": 32.25,
+        "Hip Hinge": 43.26,
+        "Back Alignment": 159.14
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[GOOD] Hip hinge: Good forward lean",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 165,
+      "timestamp_sec": 5.51,
+      "phase": "BOTTOM POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 28.34,
+        "Right Knee": 27.32,
+        "Hip Hinge": 34.59,
+        "Back Alignment": 155.23
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[WARN] Hip hinge: Leaning too far forward",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 170,
+      "timestamp_sec": 5.67,
+      "phase": "BOTTOM POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 25.99,
+        "Right Knee": 24.48,
+        "Hip Hinge": 31.98,
+        "Back Alignment": 157.4
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[WARN] Hip hinge: Leaning too far forward",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 175,
+      "timestamp_sec": 5.84,
+      "phase": "BOTTOM POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 33.73,
+        "Right Knee": 32.67,
+        "Hip Hinge": 38.55,
+        "Back Alignment": 156.48
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[WARN] Hip hinge: Leaning too far forward",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 180,
+      "timestamp_sec": 6.01,
+      "phase": "BOTTOM POSITION",
+      "score": 5,
+      "total": 5,
+      "angles": {
+        "Left Knee": 45.18,
+        "Right Knee": 37.71,
+        "Hip Hinge": 53.8,
+        "Back Alignment": 169.16
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[GOOD] Hip hinge: Good forward lean",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 185,
+      "timestamp_sec": 6.17,
+      "phase": "BOTTOM POSITION",
+      "score": 5,
+      "total": 5,
+      "angles": {
+        "Left Knee": 63.19,
+        "Right Knee": 54.03,
+        "Hip Hinge": 69.87,
+        "Back Alignment": 168.92
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[GOOD] Hip hinge: Good forward lean",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 190,
+      "timestamp_sec": 6.34,
+      "phase": "BOTTOM POSITION",
+      "score": 5,
+      "total": 5,
+      "angles": {
+        "Left Knee": 82.29,
+        "Right Knee": 71.53,
+        "Hip Hinge": 84.16,
+        "Back Alignment": 166.96
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[GOOD] Hip hinge: Good forward lean",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 195,
+      "timestamp_sec": 6.51,
+      "phase": "BOTTOM POSITION",
+      "score": 5,
+      "total": 5,
+      "angles": {
+        "Left Knee": 97.17,
+        "Right Knee": 86.74,
+        "Hip Hinge": 101.3,
+        "Back Alignment": 165.9
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[GOOD] Hip hinge: Good forward lean",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 200,
+      "timestamp_sec": 6.67,
+      "phase": "MID POSITION",
+      "score": 3,
+      "total": 5,
+      "angles": {
+        "Left Knee": 114.3,
+        "Right Knee": 106.74,
+        "Hip Hinge": 126.47,
+        "Back Alignment": 170.38
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[WARN] Mid-rep captured, try photo at top or bottom",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 205,
+      "timestamp_sec": 6.84,
+      "phase": "MID POSITION",
+      "score": 3,
+      "total": 5,
+      "angles": {
+        "Left Knee": 135.72,
+        "Right Knee": 123.29,
+        "Hip Hinge": 145.09,
+        "Back Alignment": 175.17
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[WARN] Mid-rep captured, try photo at top or bottom",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 210,
+      "timestamp_sec": 7.01,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 165.19,
+        "Right Knee": 146.24,
+        "Hip Hinge": 165.02,
+        "Back Alignment": 175.86
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 215,
+      "timestamp_sec": 7.17,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 177.74,
+        "Right Knee": 174.43,
+        "Hip Hinge": 174.83,
+        "Back Alignment": 176.13
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 220,
+      "timestamp_sec": 7.34,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 174.38,
+        "Right Knee": 168.09,
+        "Hip Hinge": 172.63,
+        "Back Alignment": 175.67
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 225,
+      "timestamp_sec": 7.51,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.54,
+        "Right Knee": 179.41,
+        "Hip Hinge": 173.36,
+        "Back Alignment": 174.12
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 230,
+      "timestamp_sec": 7.67,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.54,
+        "Right Knee": 178.1,
+        "Hip Hinge": 172.69,
+        "Back Alignment": 173.41
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 235,
+      "timestamp_sec": 7.84,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.7,
+        "Right Knee": 178.61,
+        "Hip Hinge": 174.28,
+        "Back Alignment": 174.93
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 240,
+      "timestamp_sec": 8.01,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.61,
+        "Right Knee": 178.07,
+        "Hip Hinge": 173.9,
+        "Back Alignment": 174.57
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 245,
+      "timestamp_sec": 8.17,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.4,
+        "Right Knee": 178.71,
+        "Hip Hinge": 173.47,
+        "Back Alignment": 174.24
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 250,
+      "timestamp_sec": 8.34,
+      "phase": "STANDING POSITION",
+      "score": 3,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.25,
+        "Right Knee": 177.63,
+        "Hip Hinge": 173.42,
+        "Back Alignment": 174.28
+      },
+      "feedback": [
+        "[WARN] Camera angle: DIAGONAL view detected, FRONT view recommended for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 255,
+      "timestamp_sec": 8.51,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 177.77,
+        "Right Knee": 179.87,
+        "Hip Hinge": 174.22,
+        "Back Alignment": 175.34
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 260,
+      "timestamp_sec": 8.68,
+      "phase": "STANDING POSITION",
+      "score": 3,
+      "total": 5,
+      "angles": {
+        "Left Knee": 177.43,
+        "Right Knee": 179.58,
+        "Hip Hinge": 172.93,
+        "Back Alignment": 174.18
+      },
+      "feedback": [
+        "[WARN] Camera angle: DIAGONAL view detected, FRONT view recommended for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 265,
+      "timestamp_sec": 8.84,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 177.32,
+        "Right Knee": 179.51,
+        "Hip Hinge": 173.55,
+        "Back Alignment": 174.87
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 270,
+      "timestamp_sec": 9.01,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 177.68,
+        "Right Knee": 178.95,
+        "Hip Hinge": 174.25,
+        "Back Alignment": 175.41
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 275,
+      "timestamp_sec": 9.18,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 176.98,
+        "Right Knee": 179.58,
+        "Hip Hinge": 174.23,
+        "Back Alignment": 175.72
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 280,
+      "timestamp_sec": 9.34,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 177.35,
+        "Right Knee": 178.42,
+        "Hip Hinge": 173.0,
+        "Back Alignment": 174.31
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 285,
+      "timestamp_sec": 9.51,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 177.83,
+        "Right Knee": 177.8,
+        "Hip Hinge": 173.02,
+        "Back Alignment": 174.08
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 290,
+      "timestamp_sec": 9.68,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.47,
+        "Right Knee": 177.9,
+        "Hip Hinge": 172.76,
+        "Back Alignment": 173.51
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 295,
+      "timestamp_sec": 9.84,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.99,
+        "Right Knee": 177.59,
+        "Hip Hinge": 173.85,
+        "Back Alignment": 174.36
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 300,
+      "timestamp_sec": 10.01,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.81,
+        "Right Knee": 178.9,
+        "Hip Hinge": 174.2,
+        "Back Alignment": 174.82
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 305,
+      "timestamp_sec": 10.18,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 177.73,
+        "Right Knee": 179.19,
+        "Hip Hinge": 174.16,
+        "Back Alignment": 175.35
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 310,
+      "timestamp_sec": 10.34,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.31,
+        "Right Knee": 179.4,
+        "Hip Hinge": 173.53,
+        "Back Alignment": 174.42
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 315,
+      "timestamp_sec": 10.51,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 177.91,
+        "Right Knee": 179.68,
+        "Hip Hinge": 173.29,
+        "Back Alignment": 174.4
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 320,
+      "timestamp_sec": 10.68,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 179.14,
+        "Right Knee": 179.61,
+        "Hip Hinge": 173.99,
+        "Back Alignment": 174.43
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 325,
+      "timestamp_sec": 10.84,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 175.68,
+        "Right Knee": 176.04,
+        "Hip Hinge": 172.6,
+        "Back Alignment": 175.0
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 330,
+      "timestamp_sec": 11.01,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 174.14,
+        "Right Knee": 173.85,
+        "Hip Hinge": 171.75,
+        "Back Alignment": 175.34
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 335,
+      "timestamp_sec": 11.18,
+      "phase": "MID POSITION",
+      "score": 3,
+      "total": 5,
+      "angles": {
+        "Left Knee": 146.78,
+        "Right Knee": 139.99,
+        "Hip Hinge": 147.45,
+        "Back Alignment": 173.16
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[WARN] Mid-rep captured, try photo at top or bottom",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 340,
+      "timestamp_sec": 11.34,
+      "phase": "MID POSITION",
+      "score": 3,
+      "total": 5,
+      "angles": {
+        "Left Knee": 148.66,
+        "Right Knee": 133.31,
+        "Hip Hinge": 151.39,
+        "Back Alignment": 175.26
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[WARN] Mid-rep captured, try photo at top or bottom",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 345,
+      "timestamp_sec": 11.51,
+      "phase": "MID POSITION",
+      "score": 3,
+      "total": 5,
+      "angles": {
+        "Left Knee": 114.53,
+        "Right Knee": 98.79,
+        "Hip Hinge": 129.26,
+        "Back Alignment": 174.81
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[WARN] Mid-rep captured, try photo at top or bottom",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 350,
+      "timestamp_sec": 11.68,
+      "phase": "MID POSITION",
+      "score": 2,
+      "total": 5,
+      "angles": {
+        "Left Knee": 112.63,
+        "Right Knee": 78.64,
+        "Hip Hinge": 116.99,
+        "Back Alignment": 170.24
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[WARN] Mid-rep captured, try photo at top or bottom",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[WARN] Knee symmetry: Uneven, check for knee caving"
+      ]
+    },
+    {
+      "frame_index": 355,
+      "timestamp_sec": 11.85,
+      "phase": "BOTTOM POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 85.83,
+        "Right Knee": 63.47,
+        "Hip Hinge": 90.8,
+        "Back Alignment": 170.42
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[GOOD] Hip hinge: Good forward lean",
+        "[GOOD] Back: Spine reasonably straight",
+        "[WARN] Knee symmetry: Uneven, check for knee caving"
+      ]
+    },
+    {
+      "frame_index": 360,
+      "timestamp_sec": 12.01,
+      "phase": "BOTTOM POSITION",
+      "score": 5,
+      "total": 5,
+      "angles": {
+        "Left Knee": 54.64,
+        "Right Knee": 40.4,
+        "Hip Hinge": 60.7,
+        "Back Alignment": 174.07
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[GOOD] Hip hinge: Good forward lean",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 365,
+      "timestamp_sec": 12.18,
+      "phase": "BOTTOM POSITION",
+      "score": 5,
+      "total": 5,
+      "angles": {
+        "Left Knee": 51.0,
+        "Right Knee": 38.49,
+        "Hip Hinge": 50.15,
+        "Back Alignment": 161.59
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[GOOD] Hip hinge: Good forward lean",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 370,
+      "timestamp_sec": 12.35,
+      "phase": "BOTTOM POSITION",
+      "score": 5,
+      "total": 5,
+      "angles": {
+        "Left Knee": 37.11,
+        "Right Knee": 32.43,
+        "Hip Hinge": 44.67,
+        "Back Alignment": 161.33
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[GOOD] Hip hinge: Good forward lean",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 375,
+      "timestamp_sec": 12.51,
+      "phase": "BOTTOM POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 39.99,
+        "Right Knee": 32.26,
+        "Hip Hinge": 39.65,
+        "Back Alignment": 157.93
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[WARN] Hip hinge: Leaning too far forward",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 380,
+      "timestamp_sec": 12.68,
+      "phase": "BOTTOM POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 34.32,
+        "Right Knee": 27.98,
+        "Hip Hinge": 37.97,
+        "Back Alignment": 159.44
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[WARN] Hip hinge: Leaning too far forward",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 385,
+      "timestamp_sec": 12.85,
+      "phase": "BOTTOM POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 37.19,
+        "Right Knee": 28.9,
+        "Hip Hinge": 38.46,
+        "Back Alignment": 159.84
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[WARN] Hip hinge: Leaning too far forward",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 390,
+      "timestamp_sec": 13.01,
+      "phase": "BOTTOM POSITION",
+      "score": 5,
+      "total": 5,
+      "angles": {
+        "Left Knee": 40.97,
+        "Right Knee": 35.24,
+        "Hip Hinge": 48.76,
+        "Back Alignment": 169.39
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[GOOD] Hip hinge: Good forward lean",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 395,
+      "timestamp_sec": 13.18,
+      "phase": "BOTTOM POSITION",
+      "score": 5,
+      "total": 5,
+      "angles": {
+        "Left Knee": 62.5,
+        "Right Knee": 57.85,
+        "Hip Hinge": 70.06,
+        "Back Alignment": 173.02
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[GOOD] Hip hinge: Good forward lean",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 400,
+      "timestamp_sec": 13.35,
+      "phase": "BOTTOM POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 97.8,
+        "Right Knee": 57.05,
+        "Hip Hinge": 102.14,
+        "Back Alignment": 170.44
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[GOOD] Hip hinge: Good forward lean",
+        "[GOOD] Back: Spine reasonably straight",
+        "[WARN] Knee symmetry: Uneven, check for knee caving"
+      ]
+    },
+    {
+      "frame_index": 405,
+      "timestamp_sec": 13.51,
+      "phase": "MID POSITION",
+      "score": 3,
+      "total": 5,
+      "angles": {
+        "Left Knee": 112.63,
+        "Right Knee": 113.66,
+        "Hip Hinge": 125.31,
+        "Back Alignment": 171.74
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[WARN] Mid-rep captured, try photo at top or bottom",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 410,
+      "timestamp_sec": 13.68,
+      "phase": "MID POSITION",
+      "score": 3,
+      "total": 5,
+      "angles": {
+        "Left Knee": 129.57,
+        "Right Knee": 141.3,
+        "Hip Hinge": 144.77,
+        "Back Alignment": 172.38
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[WARN] Mid-rep captured, try photo at top or bottom",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 415,
+      "timestamp_sec": 13.85,
+      "phase": "MID POSITION",
+      "score": 3,
+      "total": 5,
+      "angles": {
+        "Left Knee": 152.95,
+        "Right Knee": 141.73,
+        "Hip Hinge": 155.96,
+        "Back Alignment": 175.59
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[WARN] Mid-rep captured, try photo at top or bottom",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 420,
+      "timestamp_sec": 14.01,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 175.59,
+        "Right Knee": 171.97,
+        "Hip Hinge": 172.51,
+        "Back Alignment": 175.19
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 425,
+      "timestamp_sec": 14.18,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.59,
+        "Right Knee": 175.07,
+        "Hip Hinge": 173.28,
+        "Back Alignment": 174.12
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 430,
+      "timestamp_sec": 14.35,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.03,
+        "Right Knee": 178.18,
+        "Hip Hinge": 174.01,
+        "Back Alignment": 175.0
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 435,
+      "timestamp_sec": 14.51,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 177.29,
+        "Right Knee": 177.01,
+        "Hip Hinge": 173.18,
+        "Back Alignment": 174.62
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 440,
+      "timestamp_sec": 14.68,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 177.82,
+        "Right Knee": 178.12,
+        "Hip Hinge": 173.67,
+        "Back Alignment": 174.77
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 445,
+      "timestamp_sec": 14.85,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.28,
+        "Right Knee": 178.5,
+        "Hip Hinge": 173.89,
+        "Back Alignment": 174.74
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 450,
+      "timestamp_sec": 15.02,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 179.35,
+        "Right Knee": 178.03,
+        "Hip Hinge": 175.45,
+        "Back Alignment": 175.77
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 455,
+      "timestamp_sec": 15.18,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.12,
+        "Right Knee": 177.91,
+        "Hip Hinge": 175.05,
+        "Back Alignment": 175.97
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 460,
+      "timestamp_sec": 15.35,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.77,
+        "Right Knee": 177.88,
+        "Hip Hinge": 174.0,
+        "Back Alignment": 174.61
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 465,
+      "timestamp_sec": 15.52,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.06,
+        "Right Knee": 178.54,
+        "Hip Hinge": 173.41,
+        "Back Alignment": 174.39
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 470,
+      "timestamp_sec": 15.68,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 177.44,
+        "Right Knee": 178.5,
+        "Hip Hinge": 172.84,
+        "Back Alignment": 174.08
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 475,
+      "timestamp_sec": 15.85,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 176.97,
+        "Right Knee": 179.16,
+        "Hip Hinge": 173.14,
+        "Back Alignment": 174.6
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 480,
+      "timestamp_sec": 16.02,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 177.13,
+        "Right Knee": 179.63,
+        "Hip Hinge": 173.31,
+        "Back Alignment": 174.66
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 485,
+      "timestamp_sec": 16.18,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.15,
+        "Right Knee": 178.65,
+        "Hip Hinge": 174.3,
+        "Back Alignment": 175.18
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 490,
+      "timestamp_sec": 16.35,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.57,
+        "Right Knee": 178.63,
+        "Hip Hinge": 173.92,
+        "Back Alignment": 174.64
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 495,
+      "timestamp_sec": 16.52,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 177.75,
+        "Right Knee": 178.73,
+        "Hip Hinge": 173.47,
+        "Back Alignment": 174.67
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 500,
+      "timestamp_sec": 16.68,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 177.11,
+        "Right Knee": 179.52,
+        "Hip Hinge": 173.26,
+        "Back Alignment": 174.81
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 505,
+      "timestamp_sec": 16.85,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 176.57,
+        "Right Knee": 178.67,
+        "Hip Hinge": 172.89,
+        "Back Alignment": 174.75
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 510,
+      "timestamp_sec": 17.02,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 179.51,
+        "Right Knee": 179.41,
+        "Hip Hinge": 175.51,
+        "Back Alignment": 175.78
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 515,
+      "timestamp_sec": 17.18,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 176.39,
+        "Right Knee": 176.16,
+        "Hip Hinge": 173.96,
+        "Back Alignment": 176.04
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 520,
+      "timestamp_sec": 17.35,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 173.86,
+        "Right Knee": 168.36,
+        "Hip Hinge": 169.32,
+        "Back Alignment": 172.95
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 525,
+      "timestamp_sec": 17.52,
+      "phase": "MID POSITION",
+      "score": 3,
+      "total": 5,
+      "angles": {
+        "Left Knee": 150.33,
+        "Right Knee": 152.44,
+        "Hip Hinge": 152.88,
+        "Back Alignment": 175.39
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[WARN] Mid-rep captured, try photo at top or bottom",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 530,
+      "timestamp_sec": 17.68,
+      "phase": "MID POSITION",
+      "score": 3,
+      "total": 5,
+      "angles": {
+        "Left Knee": 139.96,
+        "Right Knee": 120.48,
+        "Hip Hinge": 147.48,
+        "Back Alignment": 176.6
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[WARN] Mid-rep captured, try photo at top or bottom",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 535,
+      "timestamp_sec": 17.85,
+      "phase": "MID POSITION",
+      "score": 2,
+      "total": 5,
+      "angles": {
+        "Left Knee": 116.97,
+        "Right Knee": 94.89,
+        "Hip Hinge": 130.35,
+        "Back Alignment": 170.84
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[WARN] Mid-rep captured, try photo at top or bottom",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[WARN] Knee symmetry: Uneven, check for knee caving"
+      ]
+    },
+    {
+      "frame_index": 540,
+      "timestamp_sec": 18.02,
+      "phase": "BOTTOM POSITION",
+      "score": 3,
+      "total": 5,
+      "angles": {
+        "Left Knee": 101.19,
+        "Right Knee": 91.2,
+        "Hip Hinge": 116.51,
+        "Back Alignment": 170.85
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[WARN] Knee depth: Squat deeper at bottom position",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 545,
+      "timestamp_sec": 18.18,
+      "phase": "BOTTOM POSITION",
+      "score": 5,
+      "total": 5,
+      "angles": {
+        "Left Knee": 79.54,
+        "Right Knee": 65.04,
+        "Hip Hinge": 86.04,
+        "Back Alignment": 166.93
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[GOOD] Hip hinge: Good forward lean",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 550,
+      "timestamp_sec": 18.35,
+      "phase": "BOTTOM POSITION",
+      "score": 5,
+      "total": 5,
+      "angles": {
+        "Left Knee": 60.48,
+        "Right Knee": 47.85,
+        "Hip Hinge": 66.55,
+        "Back Alignment": 168.55
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[GOOD] Hip hinge: Good forward lean",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 555,
+      "timestamp_sec": 18.52,
+      "phase": "BOTTOM POSITION",
+      "score": 5,
+      "total": 5,
+      "angles": {
+        "Left Knee": 44.87,
+        "Right Knee": 38.95,
+        "Hip Hinge": 51.87,
+        "Back Alignment": 165.75
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[GOOD] Hip hinge: Good forward lean",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 560,
+      "timestamp_sec": 18.69,
+      "phase": "BOTTOM POSITION",
+      "score": 5,
+      "total": 5,
+      "angles": {
+        "Left Knee": 41.11,
+        "Right Knee": 33.11,
+        "Hip Hinge": 42.93,
+        "Back Alignment": 158.92
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[GOOD] Hip hinge: Good forward lean",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 565,
+      "timestamp_sec": 18.85,
+      "phase": "BOTTOM POSITION",
+      "score": 5,
+      "total": 5,
+      "angles": {
+        "Left Knee": 34.9,
+        "Right Knee": 27.24,
+        "Hip Hinge": 40.17,
+        "Back Alignment": 158.39
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[GOOD] Hip hinge: Good forward lean",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 570,
+      "timestamp_sec": 19.02,
+      "phase": "BOTTOM POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 33.1,
+        "Right Knee": 23.78,
+        "Hip Hinge": 32.35,
+        "Back Alignment": 157.99
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[WARN] Hip hinge: Leaning too far forward",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 575,
+      "timestamp_sec": 19.19,
+      "phase": "BOTTOM POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 38.47,
+        "Right Knee": 29.31,
+        "Hip Hinge": 39.27,
+        "Back Alignment": 158.25
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[WARN] Hip hinge: Leaning too far forward",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 580,
+      "timestamp_sec": 19.35,
+      "phase": "BOTTOM POSITION",
+      "score": 5,
+      "total": 5,
+      "angles": {
+        "Left Knee": 54.03,
+        "Right Knee": 46.62,
+        "Hip Hinge": 60.22,
+        "Back Alignment": 170.54
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[GOOD] Hip hinge: Good forward lean",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 585,
+      "timestamp_sec": 19.52,
+      "phase": "BOTTOM POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 87.42,
+        "Right Knee": 64.8,
+        "Hip Hinge": 89.6,
+        "Back Alignment": 169.71
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Knee depth: Full squat depth achieved",
+        "[GOOD] Hip hinge: Good forward lean",
+        "[GOOD] Back: Spine reasonably straight",
+        "[WARN] Knee symmetry: Uneven, check for knee caving"
+      ]
+    },
+    {
+      "frame_index": 590,
+      "timestamp_sec": 19.69,
+      "phase": "MID POSITION",
+      "score": 3,
+      "total": 5,
+      "angles": {
+        "Left Knee": 111.71,
+        "Right Knee": 108.73,
+        "Hip Hinge": 121.52,
+        "Back Alignment": 171.73
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[WARN] Mid-rep captured, try photo at top or bottom",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 595,
+      "timestamp_sec": 19.85,
+      "phase": "MID POSITION",
+      "score": 3,
+      "total": 5,
+      "angles": {
+        "Left Knee": 139.63,
+        "Right Knee": 135.89,
+        "Hip Hinge": 145.74,
+        "Back Alignment": 169.34
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[WARN] Mid-rep captured, try photo at top or bottom",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 600,
+      "timestamp_sec": 20.02,
+      "phase": "MID POSITION",
+      "score": 3,
+      "total": 5,
+      "angles": {
+        "Left Knee": 142.03,
+        "Right Knee": 143.7,
+        "Hip Hinge": 148.81,
+        "Back Alignment": 171.86
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[WARN] Mid-rep captured, try photo at top or bottom",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 605,
+      "timestamp_sec": 20.19,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 165.64,
+        "Right Knee": 156.23,
+        "Hip Hinge": 162.9,
+        "Back Alignment": 172.78
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 610,
+      "timestamp_sec": 20.35,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 169.47,
+        "Right Knee": 159.8,
+        "Hip Hinge": 169.73,
+        "Back Alignment": 175.22
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 615,
+      "timestamp_sec": 20.52,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 156.36,
+        "Right Knee": 143.51,
+        "Hip Hinge": 165.4,
+        "Back Alignment": 176.84
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 620,
+      "timestamp_sec": 20.69,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 171.63,
+        "Right Knee": 164.92,
+        "Hip Hinge": 172.55,
+        "Back Alignment": 176.63
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 625,
+      "timestamp_sec": 20.85,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 176.34,
+        "Right Knee": 175.02,
+        "Hip Hinge": 172.97,
+        "Back Alignment": 174.93
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 630,
+      "timestamp_sec": 21.02,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.46,
+        "Right Knee": 178.14,
+        "Hip Hinge": 174.4,
+        "Back Alignment": 175.16
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 635,
+      "timestamp_sec": 21.19,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.01,
+        "Right Knee": 178.35,
+        "Hip Hinge": 173.93,
+        "Back Alignment": 174.93
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 640,
+      "timestamp_sec": 21.35,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 179.29,
+        "Right Knee": 177.38,
+        "Hip Hinge": 174.21,
+        "Back Alignment": 174.56
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    },
+    {
+      "frame_index": 645,
+      "timestamp_sec": 21.52,
+      "phase": "STANDING POSITION",
+      "score": 4,
+      "total": 5,
+      "angles": {
+        "Left Knee": 178.71,
+        "Right Knee": 179.46,
+        "Hip Hinge": 173.53,
+        "Back Alignment": 174.2
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for squat",
+        "[GOOD] Standing: Fully extended at top",
+        "[BAD] Hip hinge: Not hinging enough at hips",
+        "[GOOD] Back: Spine reasonably straight",
+        "[GOOD] Knee symmetry: Both knees balanced"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,310 @@
+{
+  "media_type": "video",
+  "input_path": "pull up\\pull up_17.mp4",
+  "exercise": "pullup",
+  "output_video_path": "batch_video_results\\pullup\\all_results\\pull up_17_output.mp4",
+  "representative_frame_path": "batch_video_results\\pullup\\all_results\\pull up_17_keyframe.jpg",
+  "report_path": "batch_video_results\\pullup\\all_results\\pull up_17_report.txt",
+  "json_path": "batch_video_results\\pullup\\all_results\\pull up_17_report.json",
+  "fps": 23.98,
+  "total_frames": 75,
+  "width": 1280,
+  "height": 720,
+  "duration_sec": 3.13,
+  "processed_frames": 15,
+  "frames_with_pose": 14,
+  "frames_without_pose": 1,
+  "frame_step": 5,
+  "max_seconds": 30.0,
+  "average_score": 2.93,
+  "total_checks": 4,
+  "most_common_phase": "TOP POSITION",
+  "phase_counts": {
+    "MID POSITION": 4,
+    "TOP POSITION": 9,
+    "DEAD HANG": 1
+  },
+  "common_feedback": [
+    "[GOOD] Shoulder: Lats engaged, not shrugging",
+    "[GOOD] Body: Controlled, minimal swinging",
+    "[GOOD] Camera angle: FRONT view, ideal for pullup",
+    "[GOOD] Pull height: Chin at or above bar",
+    "[WARN] Mid-rep captured, try photo at top or bottom",
+    "[WARN] Camera angle: SIDE view detected, FRONT view recommended for pullup",
+    "[BAD] Body: Swinging detected, control movement",
+    "[BAD] Shoulder: Shrugging, engage lats not traps"
+  ],
+  "warnings": [
+    "1 processed frame(s) had no detectable pose.",
+    "Video analysis was limited to the first 30.0 second(s).",
+    "Video was sampled every 5 frame(s)."
+  ],
+  "frame_reports": [
+    {
+      "frame_index": 0,
+      "timestamp_sec": 0.0,
+      "phase": "MID POSITION",
+      "score": 1,
+      "total": 4,
+      "angles": {
+        "Left Elbow": 147.21,
+        "Right Elbow": 156.76,
+        "Shoulder Elevation": 59.83,
+        "Body Alignment": 15.78
+      },
+      "feedback": [
+        "[WARN] Camera angle: SIDE view detected, FRONT view recommended for pullup",
+        "[WARN] Mid-rep captured, try photo at top or bottom",
+        "[GOOD] Shoulder: Lats engaged, not shrugging",
+        "[BAD] Body: Swinging detected, control movement"
+      ]
+    },
+    {
+      "frame_index": 5,
+      "timestamp_sec": 0.21,
+      "phase": "TOP POSITION",
+      "score": 4,
+      "total": 4,
+      "angles": {
+        "Left Elbow": 27.03,
+        "Right Elbow": 12.89,
+        "Shoulder Elevation": 20.99,
+        "Body Alignment": 178.74
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for pullup",
+        "[GOOD] Pull height: Chin at or above bar",
+        "[GOOD] Shoulder: Lats engaged, not shrugging",
+        "[GOOD] Body: Controlled, minimal swinging"
+      ]
+    },
+    {
+      "frame_index": 10,
+      "timestamp_sec": 0.42,
+      "phase": "MID POSITION",
+      "score": 2,
+      "total": 4,
+      "angles": {
+        "Left Elbow": 117.5,
+        "Right Elbow": 36.8,
+        "Shoulder Elevation": 56.4,
+        "Body Alignment": 175.17
+      },
+      "feedback": [
+        "[WARN] Camera angle: DIAGONAL view detected, FRONT view recommended for pullup",
+        "[WARN] Mid-rep captured, try photo at top or bottom",
+        "[GOOD] Shoulder: Lats engaged, not shrugging",
+        "[GOOD] Body: Controlled, minimal swinging"
+      ]
+    },
+    {
+      "frame_index": 15,
+      "timestamp_sec": 0.63,
+      "phase": "TOP POSITION",
+      "score": 4,
+      "total": 4,
+      "angles": {
+        "Left Elbow": 37.79,
+        "Right Elbow": 7.78,
+        "Shoulder Elevation": 31.74,
+        "Body Alignment": 178.9
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for pullup",
+        "[GOOD] Pull height: Chin at or above bar",
+        "[GOOD] Shoulder: Lats engaged, not shrugging",
+        "[GOOD] Body: Controlled, minimal swinging"
+      ]
+    },
+    {
+      "frame_index": 20,
+      "timestamp_sec": 0.83,
+      "phase": "MID POSITION",
+      "score": 2,
+      "total": 4,
+      "angles": {
+        "Left Elbow": 127.33,
+        "Right Elbow": 95.29,
+        "Shoulder Elevation": 126.89,
+        "Body Alignment": 177.37
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for pullup",
+        "[WARN] Mid-rep captured, try photo at top or bottom",
+        "[BAD] Shoulder: Shrugging, engage lats not traps",
+        "[GOOD] Body: Controlled, minimal swinging"
+      ]
+    },
+    {
+      "frame_index": 30,
+      "timestamp_sec": 1.25,
+      "phase": "MID POSITION",
+      "score": 0,
+      "total": 4,
+      "angles": {
+        "Left Elbow": 145.13,
+        "Right Elbow": 141.64,
+        "Shoulder Elevation": 112.76,
+        "Body Alignment": 31.95
+      },
+      "feedback": [
+        "[WARN] Camera angle: SIDE view detected, FRONT view recommended for pullup",
+        "[WARN] Mid-rep captured, try photo at top or bottom",
+        "[WARN] Shoulder: Slight shrug, pull blades down",
+        "[BAD] Body: Swinging detected, control movement"
+      ]
+    },
+    {
+      "frame_index": 35,
+      "timestamp_sec": 1.46,
+      "phase": "TOP POSITION",
+      "score": 4,
+      "total": 4,
+      "angles": {
+        "Left Elbow": 91.62,
+        "Right Elbow": 32.0,
+        "Shoulder Elevation": 90.16,
+        "Body Alignment": 174.94
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for pullup",
+        "[GOOD] Pull height: Chin at or above bar",
+        "[GOOD] Shoulder: Lats engaged, not shrugging",
+        "[GOOD] Body: Controlled, minimal swinging"
+      ]
+    },
+    {
+      "frame_index": 40,
+      "timestamp_sec": 1.67,
+      "phase": "TOP POSITION",
+      "score": 4,
+      "total": 4,
+      "angles": {
+        "Left Elbow": 88.77,
+        "Right Elbow": 59.15,
+        "Shoulder Elevation": 48.46,
+        "Body Alignment": 174.12
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for pullup",
+        "[GOOD] Pull height: Chin at or above bar",
+        "[GOOD] Shoulder: Lats engaged, not shrugging",
+        "[GOOD] Body: Controlled, minimal swinging"
+      ]
+    },
+    {
+      "frame_index": 45,
+      "timestamp_sec": 1.88,
+      "phase": "TOP POSITION",
+      "score": 4,
+      "total": 4,
+      "angles": {
+        "Left Elbow": 33.69,
+        "Right Elbow": 4.95,
+        "Shoulder Elevation": 18.34,
+        "Body Alignment": 176.59
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for pullup",
+        "[GOOD] Pull height: Chin at or above bar",
+        "[GOOD] Shoulder: Lats engaged, not shrugging",
+        "[GOOD] Body: Controlled, minimal swinging"
+      ]
+    },
+    {
+      "frame_index": 50,
+      "timestamp_sec": 2.09,
+      "phase": "TOP POSITION",
+      "score": 3,
+      "total": 4,
+      "angles": {
+        "Left Elbow": 88.51,
+        "Right Elbow": 82.4,
+        "Shoulder Elevation": 91.04,
+        "Body Alignment": 113.39
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for pullup",
+        "[GOOD] Pull height: Chin at or above bar",
+        "[GOOD] Shoulder: Lats engaged, not shrugging",
+        "[BAD] Body: Swinging detected, control movement"
+      ]
+    },
+    {
+      "frame_index": 55,
+      "timestamp_sec": 2.29,
+      "phase": "DEAD HANG",
+      "score": 3,
+      "total": 4,
+      "angles": {
+        "Left Elbow": 162.48,
+        "Right Elbow": 156.77,
+        "Shoulder Elevation": 12.21,
+        "Body Alignment": 164.3
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for pullup",
+        "[WARN] Dead hang: Extend arms fully at bottom",
+        "[GOOD] Shoulder: Lats engaged, not shrugging",
+        "[GOOD] Body: Controlled, minimal swinging"
+      ]
+    },
+    {
+      "frame_index": 60,
+      "timestamp_sec": 2.5,
+      "phase": "TOP POSITION",
+      "score": 3,
+      "total": 4,
+      "angles": {
+        "Left Elbow": 85.9,
+        "Right Elbow": 163.02,
+        "Shoulder Elevation": 10.92,
+        "Body Alignment": 155.31
+      },
+      "feedback": [
+        "[WARN] Camera angle: SIDE view detected, FRONT view recommended for pullup",
+        "[GOOD] Pull height: Chin at or above bar",
+        "[GOOD] Shoulder: Lats engaged, not shrugging",
+        "[GOOD] Body: Controlled, minimal swinging"
+      ]
+    },
+    {
+      "frame_index": 65,
+      "timestamp_sec": 2.71,
+      "phase": "TOP POSITION",
+      "score": 3,
+      "total": 4,
+      "angles": {
+        "Left Elbow": 95.44,
+        "Right Elbow": 34.46,
+        "Shoulder Elevation": 121.27,
+        "Body Alignment": 179.55
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for pullup",
+        "[GOOD] Pull height: Chin at or above bar",
+        "[BAD] Shoulder: Shrugging, engage lats not traps",
+        "[GOOD] Body: Controlled, minimal swinging"
+      ]
+    },
+    {
+      "frame_index": 70,
+      "timestamp_sec": 2.92,
+      "phase": "TOP POSITION",
+      "score": 4,
+      "total": 4,
+      "angles": {
+        "Left Elbow": 66.24,
+        "Right Elbow": 21.0,
+        "Shoulder Elevation": 69.67,
+        "Body Alignment": 175.65
+      },
+      "feedback": [
+        "[GOOD] Camera angle: FRONT view, ideal for pullup",
+        "[GOOD] Pull height: Chin at or above bar",
+        "[GOOD] Shoulder: Lats engaged, not shrugging",
+        "[GOOD] Body: Controlled, minimal swinging"
+      ]
+    }
+  ]
+}
