@@ -505,7 +505,7 @@ def analyze_pushup(landmarks):
             status.append("bad")
 
     else:  # MID
-        if body_line >= 148:
+        if body_line >= 160:
             feedback.append("[GOOD] Body line: Straight - core engaged")
             status.append("good")
         else:

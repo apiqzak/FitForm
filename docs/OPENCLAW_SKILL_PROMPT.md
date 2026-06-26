@@ -319,10 +319,10 @@ Set-Location "C:\Users\afiqz\OneDrive - Universiti Malaya\degree AI\Sem 6\Comput
 For video input, use:
 
 ```powershell
-Set-Location "C:\Users\afiqz\OneDrive - Universiti Malaya\degree AI\Sem 6\Computer Vision and Pattern Recognition\Group Assignment\project"; .\venv\Scripts\python.exe analyze_cli.py --input "<input_path>" --exercise "<exercise>" --media-type auto --output "$env:USERPROFILE\.openclaw\workspace\openclaw_output.mp4" --report "$env:USERPROFILE\.openclaw\workspace\openclaw_report.txt" --json "$env:USERPROFILE\.openclaw\workspace\openclaw_report.json" --representative-frame "$env:USERPROFILE\.openclaw\workspace\openclaw_keyframe.jpg" --frame-step 5 --max-seconds 30 --quiet
+Set-Location "C:\Users\afiqz\OneDrive - Universiti Malaya\degree AI\Sem 6\Computer Vision and Pattern Recognition\Group Assignment\project"; .\venv\Scripts\python.exe analyze_cli.py --input "<input_path>" --exercise "<exercise>" --media-type auto --output "$env:USERPROFILE\.openclaw\workspace\openclaw_output.mp4" --report "$env:USERPROFILE\.openclaw\workspace\openclaw_report.txt" --json "$env:USERPROFILE\.openclaw\workspace\openclaw_report.json" --frame-step 5 --max-seconds 30 --quiet
 ```
 
-Save outputs into OpenClaw's workspace so the dashboard can display the annotated image, annotated video, or representative video frame directly.
+Save outputs into OpenClaw's workspace so the dashboard can display the annotated image or annotated video directly. For video uploads, the annotated `.mp4` is the primary result. Do not generate or show a representative frame by default. Only use `--representative-frame` if the user explicitly asks for a still preview/keyframe or if the interface cannot attach videos at all. Do not list generated filenames such as `openclaw_output.mp4`, `openclaw_report.txt`, or `openclaw_report.json` in the normal final response. The files should exist in the background, but the user-facing chat should show only the media itself, the analysis summary, and follow-up suggestions.
 
 Fallback command:
 
@@ -349,88 +349,88 @@ After the command finishes, respond with:
 2. Score
 3. Exercise phase
 4. Main feedback points
-5. Annotated image, annotated video, or representative frame shown directly in OpenClaw
+5. Annotated image or annotated video shown directly in OpenClaw
 6. Limitation note if relevant
 
-Use this format:
+Use this format with simple emojis:
 
 ```text
-Analysis complete!
+✅ Analysis complete!
 
-Exercise: SQUAT
-Media type: Image
-Phase: BOTTOM POSITION
-Score: 4/5
+🏋️ Exercise: SQUAT
+🖼️ Media type: Image
+📍 Phase: BOTTOM POSITION
+⭐ Score: 4/5
 
-Main feedback:
-- Camera angle: FRONT view, ideal for squat
-- Knee depth: Full squat depth achieved
-- Knee symmetry: Uneven, check for knee caving
+📝 Main feedback:
+• Camera angle: FRONT view, ideal for squat
+• Knee depth: Full squat depth achieved
+• Knee symmetry: Uneven, check for knee caving
 
-Note: This is educational posture feedback, not medical advice.
+⚠️ Note: This is educational posture feedback, not medical advice.
 
-You can also ask me:
-- What should I fix first?
-- Why did I get this warning?
-- Can you explain my score?
-- How can I improve my <exercise> form?
+💬 You can also ask me:
+• What should I fix first?
+• Why did I get this warning?
+• Can you explain my score?
+• How can I improve my <exercise> form?
 ```
 
 If you write a more natural response with a `Try next:` line or a camera note, still end with follow-up suggestions:
 
 ```text
-Analysis complete.
+✅ Analysis complete.
 
-Exercise: PULL-UP
-Phase: TOP POSITION
-Score: 2.93/4 checks passed
+🏋️ Exercise: PULL-UP
+📍 Phase: TOP POSITION
+⭐ Score: 2.93/4 checks passed
 
-Main feedback:
-- Chin reaches bar height, so your top position looks solid.
-- Body control is mostly good.
-- Some frames show possible swinging and shoulder shrugging.
+📝 Main feedback:
+• Chin reaches bar height, so your top position looks solid.
+• Body control is mostly good.
+• Some frames show possible swinging and shoulder shrugging.
 
-Try next: slow the lowering phase and pause briefly at the top.
+🎯 Try next: slow the lowering phase and pause briefly at the top.
 
-Camera note: front view is helpful, but a wider full-body frame would make swing and leg movement easier to judge.
+📷 Camera note: front view is helpful, but a wider full-body frame would make swing and leg movement easier to judge.
 
-Note: This is educational posture feedback, not medical advice.
+⚠️ Note: This is educational posture feedback, not medical advice.
 
-You can also ask me:
-- What should I fix first?
-- Why did I get this warning?
-- Can you explain my score?
-- How can I improve my pull-up form?
-- Can I try another image or video?
+💬 You can also ask me:
+• What should I fix first?
+• Why did I get this warning?
+• Can you explain my score?
+• How can I improve my pull-up form?
+• Can I try another image or video?
 ```
 
-Show or attach the annotated image/video directly in the response whenever OpenClaw supports local media display. For video, include the representative frame if it was generated. Do not show full local file paths unless the user asks for debugging details.
+Show or attach the annotated image/video directly in the response whenever OpenClaw supports local media display. For video uploads, attach/display the annotated `.mp4` as the main result and do not replace it with a single keyframe image. If video preview is not supported in the current chat, say briefly that the annotated video was generated but cannot be previewed here, then continue with the summary. Do not show full local file paths unless the user asks for debugging details.
 
 ## Error Handling
 
 If the command reports no pose detected, tell the user:
 
 ```text
-Sorry, I could not analyze this file. Please make sure:
-- the file is an image or video
-- the full body is visible
-- the exercise is squat, pushup, plank, or pullup
+⚠️ Sorry, I could not analyze this file clearly. Please make sure:
+• the file is an image or video
+• the full body is visible
+• the exercise is squat, pushup, plank, or pullup
 
-You can also ask me:
-- I can upload a workout image
-- I can upload a short workout video
-- What kind of image works best?
+💬 You can also ask me:
+• I can upload a workout image
+• I can upload a short workout video
+• What kind of image works best?
 ```
 
 If the file path is invalid, tell the user:
 
 ```text
-Sorry, I could not open the uploaded file. Please upload it again.
+⚠️ Sorry, I could not open the uploaded file. Please upload it again.
 
-You can also ask me:
-- I can upload a workout image
-- I can upload a short workout video
-- What kind of image works best?
+💬 You can also ask me:
+• I can upload a workout image
+• I can upload a short workout video
+• What kind of image works best?
 ```
 
 If the exercise type is invalid, tell the user:
@@ -543,5 +543,5 @@ Use this flow during the live demo:
 1. User uploads `samples/images/squat.jpg` or a short `samples/videos/squat/squat_27.mp4`.
 2. User says: `Analyze this as squat`.
 3. Skill runs `analyze_cli.py --media-type auto`.
-4. Skill returns `openclaw_output.jpg` for image input or `openclaw_output.mp4` plus `openclaw_keyframe.jpg` for video input.
+4. Skill returns `openclaw_output.jpg` for image input or `openclaw_output.mp4` for video input.
 5. Presenter explains the detected landmarks, joint angles, score, and feedback.

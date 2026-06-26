@@ -387,33 +387,22 @@ Set-Location "C:\Users\afiqz\OneDrive - Universiti Malaya\degree AI\Sem 6\Comput
 Video or auto-detected video command:
 
 ```powershell
-Set-Location "C:\Users\afiqz\OneDrive - Universiti Malaya\degree AI\Sem 6\Computer Vision and Pattern Recognition\Group Assignment\project"; .\venv\Scripts\python.exe analyze_cli.py --input "<input_path>" --exercise "<exercise>" --media-type auto --output "$env:USERPROFILE\.openclaw\workspace\openclaw_output.mp4" --report "$env:USERPROFILE\.openclaw\workspace\openclaw_report.txt" --json "$env:USERPROFILE\.openclaw\workspace\openclaw_report.json" --representative-frame "$env:USERPROFILE\.openclaw\workspace\openclaw_keyframe.jpg" --frame-step 5 --max-seconds 30 --quiet
+Set-Location "C:\Users\afiqz\OneDrive - Universiti Malaya\degree AI\Sem 6\Computer Vision and Pattern Recognition\Group Assignment\project"; .\venv\Scripts\python.exe analyze_cli.py --input "<input_path>" --exercise "<exercise>" --media-type auto --output "$env:USERPROFILE\.openclaw\workspace\openclaw_output.mp4" --report "$env:USERPROFILE\.openclaw\workspace\openclaw_report.txt" --json "$env:USERPROFILE\.openclaw\workspace\openclaw_report.json" --frame-step 5 --max-seconds 30 --quiet
 ```
 
 For videos, mention that the analysis samples frames using `--frame-step 5` and limits processing with `--max-seconds 30` by default.
 
-After the command finishes, display or attach the generated result directly in the response when possible. In the user-facing response, use short generated filenames only:
+For video uploads, the annotated `.mp4` is the main result. Do not generate or show a representative frame by default. Only use `--representative-frame` if the user explicitly asks for a still preview/keyframe or if the interface cannot attach videos at all.
 
-```text
-openclaw_output.jpg
-openclaw_output.mp4
-openclaw_keyframe.jpg
-```
+After the command finishes, display or attach the generated result directly in the response when possible. Do not list generated filenames in the normal user-facing message. The files are generated for the system/demo, but the user should only see the annotated media itself and the clean FitForm summary.
 
-Important: do not stop after printing the file path. The final response should attempt to show the generated image/video/keyframe inside OpenClaw. If only markdown is available for images, include this markdown image reference:
+Important: do not stop after printing the file path. The final response should attempt to show the generated image or video inside OpenClaw. If only markdown is available for images, include this markdown image reference:
 
 ```md
 ![Annotated FitForm result](openclaw_output.jpg)
 ```
 
-For video, include the annotated video path and representative frame path if available.
-
-Also mention the report files by short filename only:
-
-```text
-openclaw_report.txt
-openclaw_report.json
-```
+For video, attach or display the annotated `.mp4` as the primary result. Do not replace the video with a single representative image. Do not show `openclaw_keyframe.jpg` as the normal video result. If the interface cannot render videos, say briefly that the annotated video was generated but cannot be previewed in this chat, then continue with the text summary. Do not write lines such as `Annotated video: openclaw_output.mp4`, `Representative frame: openclaw_keyframe.jpg`, or `Report files: openclaw_report.txt, openclaw_report.json` in the final chat response unless the user explicitly asks where the files were saved.
 
 Fallback command if workspace output is not needed:
 
@@ -450,114 +439,114 @@ Do not choose files from `C:\Users\afiqz\Downloads` if OpenClaw says the media p
 
 ## Response Format
 
-After image analysis, respond with:
+After image analysis, respond with simple emojis:
 
 ```text
-Analysis complete!
+✅ Analysis complete!
 
-Exercise: <EXERCISE>
-Media type: Image
-Phase: <PHASE>
-Score: <SCORE>/<TOTAL>
+🏋️ Exercise: <EXERCISE>
+🖼️ Media type: Image
+📍 Phase: <PHASE>
+⭐ Score: <SCORE>/<TOTAL>
 
-Main feedback:
-- <feedback item>
-- <feedback item>
-- <feedback item>
+📝 Main feedback:
+• <feedback item>
+• <feedback item>
+• <feedback item>
 
 Annotated image:
 ![Annotated FitForm result](openclaw_output.jpg)
 
-Note: This is educational posture feedback, not medical advice.
+⚠️ Note: This is educational posture feedback, not medical advice.
 
-You can also ask me:
-- What should I fix first?
-- Why did I get this warning?
-- Can you explain my score?
-- How can I improve my <exercise> form?
+💬 You can also ask me:
+• What should I fix first?
+• Why did I get this warning?
+• Can you explain my score?
+• How can I improve my <exercise> form?
 ```
 
-After video analysis, respond with:
+After video analysis, respond with simple emojis:
 
 ```text
-Analysis complete!
+✅ Analysis complete!
 
-Exercise: <EXERCISE>
-Media type: Video
-Frames processed: <PROCESSED_FRAMES>
-Frames with pose: <FRAMES_WITH_POSE>
-Score: <AVERAGE_SCORE>/<TOTAL>
-Most common phase: <PHASE>
+🏋️ Exercise: <EXERCISE>
+🎥 Media type: Video
+🎞️ Frames processed: <PROCESSED_FRAMES>
+✅ Frames with pose: <FRAMES_WITH_POSE>
+⭐ Score: <AVERAGE_SCORE>/<TOTAL>
+📍 Most common phase: <PHASE>
 
-Main feedback:
-- <feedback item>
-- <feedback item>
-- <feedback item>
+📝 Main feedback:
+• <feedback item>
+• <feedback item>
+• <feedback item>
 
-Note: This is educational posture feedback from sampled video frames, not medical advice.
+⚠️ Note: This is educational posture feedback from sampled video frames, not medical advice.
 
-You can also ask me:
-- What should I fix first?
-- Why did I get this warning?
-- Can you explain my score?
-- How can I improve my <exercise> form?
+💬 You can also ask me:
+• What should I fix first?
+• Why did I get this warning?
+• Can you explain my score?
+• How can I improve my <exercise> form?
 ```
 
 If you write a more natural response with a `Try next:` line or a camera note, still end with follow-up suggestions:
 
 ```text
-Analysis complete.
+✅ Analysis complete.
 
-Exercise: PULL-UP
-Phase: TOP POSITION
-Score: 2.93/4 checks passed
+🏋️ Exercise: PULL-UP
+📍 Phase: TOP POSITION
+⭐ Score: 2.93/4 checks passed
 
-Main feedback:
-- Chin reaches bar height, so your top position looks solid.
-- Body control is mostly good.
-- Some frames show possible swinging and shoulder shrugging.
+📝 Main feedback:
+• Chin reaches bar height, so your top position looks solid.
+• Body control is mostly good.
+• Some frames show possible swinging and shoulder shrugging.
 
-Try next: slow the lowering phase and pause briefly at the top.
+🎯 Try next: slow the lowering phase and pause briefly at the top.
 
-Camera note: front view is helpful, but a wider full-body frame would make swing and leg movement easier to judge.
+📷 Camera note: front view is helpful, but a wider full-body frame would make swing and leg movement easier to judge.
 
-Note: This is educational posture feedback, not medical advice.
+⚠️ Note: This is educational posture feedback, not medical advice.
 
-You can also ask me:
-- What should I fix first?
-- Why did I get this warning?
-- Can you explain my score?
-- How can I improve my pull-up form?
-- Can I try another image or video?
+💬 You can also ask me:
+• What should I fix first?
+• Why did I get this warning?
+• Can you explain my score?
+• How can I improve my pull-up form?
+• Can I try another image or video?
 ```
 
-Show the annotated image, annotated video, or representative frame directly in the OpenClaw response whenever the dashboard supports local media display. Do not show full local file paths in the normal response. If the media cannot be rendered, provide only the short generated filename such as `openclaw_output.jpg`, `openclaw_output.mp4`, or `openclaw_keyframe.jpg`. Full paths are only for debugging if the user asks.
+Show the annotated image or annotated video directly in the OpenClaw response whenever the dashboard supports local media display. For video uploads, the visible media should be the annotated video, not a still keyframe. Do not show full local file paths or generated filenames in the normal response. If the video cannot be rendered, simply continue with the text summary and do not add file-name lines. Full paths and filenames are only for debugging if the user asks.
 
 ## Error Handling
 
 If no pose is detected:
 
 ```text
-Sorry, I could not analyze this file. Please make sure:
-- the file is an image or video
-- the full body is visible
-- the exercise is squat, pushup, plank, or pullup
+⚠️ Sorry, I could not analyze this file clearly. Please make sure:
+• the file is an image or video
+• the full body is visible
+• the exercise is squat, pushup, plank, or pullup
 
-You can also ask me:
-- I can upload a workout image
-- I can upload a short workout video
-- What kind of image works best?
+💬 You can also ask me:
+• I can upload a workout image
+• I can upload a short workout video
+• What kind of image works best?
 ```
 
 If the file path is invalid:
 
 ```text
-Sorry, I could not open the uploaded file. Please upload the image or video again.
+⚠️ Sorry, I could not open the uploaded file. Please upload the image or video again.
 
-You can also ask me:
-- I can upload a workout image
-- I can upload a short workout video
-- What kind of image works best?
+💬 You can also ask me:
+• I can upload a workout image
+• I can upload a short workout video
+• What kind of image works best?
 ```
 
 If the exercise type is invalid:
@@ -569,28 +558,28 @@ This prototype only supports squat, pushup, plank, and pullup.
 If the uploaded file type is unsupported:
 
 ```text
-Sorry, I could not analyze this file type.
+⚠️ Sorry, I could not analyze this file type.
 Please use a supported workout image or video file.
 
 Supported images: .jpg, .jpeg, .png
 Supported videos: .mp4, .mov, .avi, .mkv
 
-You can also ask me:
-- I can upload a workout image
-- I can upload a short workout video
-- What kind of image works best?
+💬 You can also ask me:
+• I can upload a workout image
+• I can upload a short workout video
+• What kind of image works best?
 ```
 
 If the selected media type does not match the uploaded file:
 
 ```text
-Sorry, the selected media type does not match the uploaded file.
+⚠️ Sorry, the selected media type does not match the uploaded file.
 Please use automatic media detection or upload a supported image or video.
 
-You can also ask me:
-- I can upload a workout image
-- I can upload a short workout video
-- What kind of image works best?
+💬 You can also ask me:
+• I can upload a workout image
+• I can upload a short workout video
+• What kind of image works best?
 ```
 
 If a video runs but no sampled frame contains a clear pose, explain:

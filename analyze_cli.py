@@ -11,6 +11,11 @@ os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "2")
 os.environ.setdefault("GLOG_minloglevel", "2")
 os.environ.setdefault("ABSL_MIN_LOG_LEVEL", "2")
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 from test_pose import VALID_EXERCISES, analyze_image_file, format_report
 
 
@@ -215,42 +220,42 @@ def print_followup_suggestions(exercise=None, context="analysis"):
         heading = "You can also ask me:"
 
     print()
-    print(heading)
+    print(f"💬 {heading}")
     for suggestion in suggestions:
-        print(f"- {suggestion}")
+        print(f"• {suggestion}")
 
 
 def print_quiet_image_summary(report, args):
-    print("Analysis complete!")
+    print("✅ Analysis complete!")
     print()
-    print(f"Exercise: {report['exercise'].title()}")
-    print("Media type: Image")
-    print(f"Phase: {report['phase']}")
-    print(f"Score: {report['score']}/{report['total']}")
-    print("Main feedback:")
+    print(f"🏋️ Exercise: {report['exercise'].title()}")
+    print("🖼️ Media type: Image")
+    print(f"📍 Phase: {report['phase']}")
+    print(f"⭐ Score: {report['score']}/{report['total']}")
+    print("📝 Main feedback:")
     for item in report["feedback"][:3]:
-        print(f"- {clean_feedback(item)}")
+        print(f"• {clean_feedback(item)}")
     print_followup_suggestions(report.get("exercise"), "analysis")
 
 
 def print_quiet_video_summary(report, args):
-    print("Analysis complete!")
+    print("✅ Analysis complete!")
     print()
-    print(f"Exercise: {report['exercise'].title()}")
-    print("Media type: Video")
-    print(f"Score: {report['average_score']}/{report['total_checks']}")
-    print(f"Frames with pose: {report['frames_with_pose']}")
+    print(f"🏋️ Exercise: {report['exercise'].title()}")
+    print("🎥 Media type: Video")
+    print(f"⭐ Score: {report['average_score']}/{report['total_checks']}")
+    print(f"✅ Frames with pose: {report['frames_with_pose']}")
     if report.get("frames_without_pose"):
-        print(f"Frames without pose: {report['frames_without_pose']}")
-    print(f"Most common phase: {report['most_common_phase']}")
-    print("Main feedback:")
+        print(f"⚠️ Frames without pose: {report['frames_without_pose']}")
+    print(f"📍 Most common phase: {report['most_common_phase']}")
+    print("📝 Main feedback:")
     feedback_items = report.get("common_feedback", [])[:3]
     if not feedback_items and report.get("warnings"):
         feedback_items = report.get("warnings", [])[:3]
     if not feedback_items:
         feedback_items = ["No repeated feedback was available from the sampled frames."]
     for item in feedback_items:
-        print(f"- {clean_feedback(item)}")
+        print(f"• {clean_feedback(item)}")
     print_followup_suggestions(report.get("exercise"), "analysis")
 
 

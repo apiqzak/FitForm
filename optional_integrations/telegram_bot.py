@@ -200,20 +200,20 @@ def build_followup_suggestions(context, exercise=None):
 
 def format_followup_suggestions(context, exercise=None):
     suggestions = build_followup_suggestions(context, exercise)
-    return "You can also ask me:\n" + "\n".join(f"- {item}" for item in suggestions)
+    return "💬 You can also ask me:\n" + "\n".join(f"• {item}" for item in suggestions)
 
 
 def format_user_summary(report):
-    feedback = "\n".join(f"- {clean_feedback(item)}" for item in report["feedback"][:3])
+    feedback = "\n".join(f"• {clean_feedback(item)}" for item in report["feedback"][:3])
     return (
-        "Analysis complete!\n\n"
-        f"Exercise: {report['exercise'].title()}\n"
-        "Media type: Image\n"
-        f"Phase: {report['phase']}\n"
-        f"Score: {report['score']}/{report['total']}\n\n"
-        "Main feedback:\n"
+        "✅ Analysis complete!\n\n"
+        f"🏋️ Exercise: {report['exercise'].title()}\n"
+        "🖼️ Media type: Image\n"
+        f"📍 Phase: {report['phase']}\n"
+        f"⭐ Score: {report['score']}/{report['total']}\n\n"
+        "📝 Main feedback:\n"
         f"{feedback}\n\n"
-        "Note: This is educational posture feedback, not medical advice.\n\n"
+        "⚠️ Note: This is educational posture feedback, not medical advice.\n\n"
         f"{format_followup_suggestions('analysis', report['exercise'])}"
     )
 
@@ -348,8 +348,8 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
             return
 
         caption = (
-            f"{report['exercise'].upper()} | {report['phase']}\n"
-            f"Score: {report['score']}/{report['total']} checks passed"
+            f"🏋️ {report['exercise'].upper()} | 📍 {report['phase']}\n"
+            f"⭐ Score: {report['score']}/{report['total']} checks passed"
         )
         with output_path.open("rb") as image_file:
             await update.message.reply_photo(photo=image_file, caption=caption)
